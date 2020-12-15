@@ -1,0 +1,14 @@
+{
+    "homepage": {
+        "title": "Homepage"
+    },
+    "page": {
+        "title": "New page"
+    },
+    "task": {
+        "title": "New task"
+    },
+    "contacts": {
+        "title": "Contacts New"
+    }
+}

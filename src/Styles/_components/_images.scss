@@ -1,0 +1,11 @@
+img {
+    max-width: 100%;
+}
+
+.img {
+    &--intro {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}

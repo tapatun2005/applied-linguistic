@@ -1,0 +1,11 @@
+.cols {
+    position: relative;
+    display: flex;
+    margin: 0 2rem;
+    .col {
+        position: relative;
+        margin: 0 1rem;
+        flex: 1 1 0;
+        display: flex;
+    }
+}

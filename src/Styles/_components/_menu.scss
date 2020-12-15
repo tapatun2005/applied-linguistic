@@ -1,0 +1,40 @@
+.menu__toggle {
+    position: fixed;
+    right: 2rem;
+    top: 2rem;
+    width: 45px; 
+    height: 45px;
+    border-radius: 5px;
+    background: white;
+    cursor: pointer;
+    z-index: 2;
+    font-size: 1.5rem;
+
+    span {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+
+nav {
+    position: fixed;
+    z-index: 1;
+    height: 100%;
+    left: 100%;
+    top: 0;
+    transition: transform .2s ease-in-out;
+    padding: 5rem;
+    background: white;
+    box-shadow: -3px 0 15px rgba(black, .1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 200px;
+    &.is-active {
+        transform: translate(-100%);
+    }
+}
