@@ -1,0 +1,66 @@
+.tabs {
+    margin: 5rem -0.5rem;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    width: calc(100% + 1rem);
+    flex-wrap: wrap;
+    li {
+        background: white;
+        box-shadow: 0 10px 50px rgba($black, .1);
+        flex: 1 0 0;
+        margin: .5rem;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        counter-increment: item;
+        cursor: pointer;
+        transition: transform .1s ease-in-out;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        ._img {
+            width: 100%;
+            padding-top: 57%;
+            position: relative;
+            &:before {
+                content: counter(item);
+                position: absolute;
+                font-weight: bold;
+                bottom: 0;
+                left: 40px;
+                font-size: 8vw;
+                @media(min-width: $desktop-lg) {
+                    font-size: 5rem;
+                }
+            }
+            img {
+                position: absolute;
+                right: 40px;
+                bottom: 0;
+                height: 120%;
+            }
+        }
+
+        ._content {
+            padding: 20px 40px;
+            display: flex;
+            flex: 1 1 0;
+            flex-direction: column;
+            justify-content: space-between;
+
+            ._title {
+                margin-bottom: 1rem;
+                text-transform: uppercase;
+            }
+
+            ._icon {
+                img {
+                    width: 32px;
+                }
+            }
+        }
+    }
+}

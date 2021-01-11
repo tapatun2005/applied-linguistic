@@ -1,5 +1,15 @@
 .container {
-    max-width: 1000px;
+    max-width: 1200px;
     width: 100%;
     margin: 0 auto;
+}
+
+section {
+    margin: 5rem 0;
+}
+
+.section {
+    &--lg {
+       margin: 10rem 0;
+    }
 }

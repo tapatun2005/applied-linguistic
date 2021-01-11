@@ -1,12 +1,12 @@
 .video {
-    &--intro {
+    width: 100%;
+    padding-top: 57%;
+    background: rgba($black,.1);
+    img {
         position: absolute;
-        bottom: 0;
-        right: 0;
-        border-radius: 50%;
-        transform: translate(50%, 50%);
-        width: 50vw;
-        height: 50vw;
-        background: $black;
+        bottom: -50px;
+        left: 50%;
+        transform: translate(-50%);
+        height: calc(100% + 100px);
     }
 }

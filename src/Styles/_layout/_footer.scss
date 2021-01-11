@@ -1,0 +1,28 @@
+footer {
+    background-color: $black;
+    padding: 40px;
+}
+
+.footer {
+    &-logo {
+        width: 32px;
+    }
+
+    &-nav {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        li {
+            flex: 1 1 0;
+            margin: 0 1rem 1rem;
+        }
+
+        a {
+            color: rgba(white, .5);
+            text-decoration: none;
+        }
+    }
+}

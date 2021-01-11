@@ -7,5 +7,25 @@
         margin: 0 1rem;
         flex: 1 1 0;
         display: flex;
+
+        & > * {
+            width: 100%;
+        }
+
+        &-1 {
+            @extend .col;
+            flex: 1 1 0;
+        }
+
+        &-2 {
+            @extend .col;
+            flex: 2 1 0;
+        }
+
+        &-3 {
+            @extend .col;
+            flex: 2 1 0;
+        }
     }
+
 }
