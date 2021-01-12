@@ -11,7 +11,7 @@
             <img src="@/assets/arrow-down.svg" alt="">
           </div>
         </div>
-        <div class="col">
+        <div class="col f-direction--column f-justify--center">
           <div class="img img--intro">
             <img class="" src="@/assets/head.png">
           </div>
