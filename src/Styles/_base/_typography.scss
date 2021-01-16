@@ -35,6 +35,18 @@ h1 {
             font-size: 3rem;
         }
     }
+
+    &.-md {
+        font-size: 5em;
+
+        @media (max-width: $desktop-lg) {
+            font-size: 3rem;
+        }
+        @media (max-width: $mobile) {
+            font-size: 2rem;
+        }
+    }
+    
 }
 
 h2 {

@@ -4,7 +4,7 @@
       <div class="cols">
         <div class="col h--full f-justify--center f-direction--column">
           <div class="intro">
-            <h1>
+            <h1 class="-md">
               <span class="subtitle">Part 1</span>
               Interview one and Reflect
             </h1>
@@ -25,14 +25,8 @@
         <div class="cols">
           
           <div class="col-1">
-            <div>
-            <!-- <h2 class="article-title">
-              <span>I</span>
-              <span>n</span>
-              <span>t</span>
-              <span>r</span>
-              <span>o</span>
-            </h2> -->
+            <div class="video">
+                <img src="@/assets/head.png" alt="">
             </div>
           </div>
 
@@ -46,11 +40,31 @@
 
       <section>
         <div class="cols">
+          <div class="col">
+            <h1 class="-center">
+              <span class="subtitle">Task</span>
+              Interview
+            </h1>
+          </div>
+        </div>
+      </section>
+
+      <section class="section--lg">
+        <div class="cols">
+          <div class="col">
+            <div class="video">
+                <img src="@/assets/head.png" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="cols">
           
           <div class="col-1">
             <div>
               <h2 class="article-title">
-                <div class="subtitle">Interview</div>
                 Preparation
               </h2>
             </div>
@@ -82,7 +96,6 @@
             <div>
             <h2 class="article-title">
               Before
-              <div class="subtitle">Interview</div>
             </h2>
             </div>
           </div>
@@ -135,75 +148,22 @@
         </div>
       </section>
 
-
+      <section>
+        <div class="cols">
+          <div class="col">
+            <h1 class="-center">
+              <span class="subtitle">Task</span>
+              Reflect
+            </h1>
+          </div>
+        </div>
+      </section>
 
       <section class="section--lg">
         <div class="cols">
           <div class="col">
             <div class="video">
                 <img src="@/assets/head.png" alt="">
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="cols">
-          <div class="col">
-            <div>
-              <h2 class="-center">Outline</h2>
-              <p class="-center">These materials are made up of four parts</p>
-
-              <ul class="tabs">
-                <li class="tab">
-                  <div class="_img">
-                    <img src="@/assets/head.png" alt="">
-                  </div>
-                  <div class="_content">
-                    <div class="_title">Interview One and Reflect</div>
-                    <div class="_icon">
-                      <img src="@/assets/arrow-right.svg" alt="">
-                    </div>
-                  </div>
-                </li>
-
-                <li class="tab">
-                  <div class="_img">
-                    <img src="@/assets/head.png" alt="">
-                  </div>
-                  <div class="_content">
-                    <div class="_title">Input and Reflect </div>
-                    <div class="_icon">
-                      <img src="@/assets/arrow-right.svg" alt="">
-                    </div>
-                  </div>
-                </li>
-
-                <li class="tab">
-                  <div class="_img">
-                    <img src="@/assets/head.png" alt="">
-                  </div>
-                  <div class="_content">
-                    <div class="_title">Interview Two</div>
-                    <div class="_icon">
-                      <img src="@/assets/arrow-right.svg" alt="">
-                    </div>
-                  </div>
-                </li>
-                
-                <li class="tab">
-                  <div class="_img">
-                    <img src="@/assets/head.png" alt="">
-                  </div>
-                  <div class="_content">
-                    <div class="_title">Reflect and Recommend</div>
-                    <div class="_icon">
-                      <img src="@/assets/arrow-right.svg" alt="">
-                    </div>
-                  </div>
-                </li>
-              </ul>
-
             </div>
           </div>
         </div>
