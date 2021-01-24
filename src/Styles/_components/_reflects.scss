@@ -1,0 +1,54 @@
+.reflects {
+    list-style: none;
+    padding: 0;
+    margin: 3rem auto;
+    padding: 0;
+
+    li {
+        flex: 1 0 0;
+        cursor: pointer;
+        counter-increment: reflectItem;
+        border-top: 1px solid rgba($black, .1);
+
+        ._expand {
+            padding: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+        }
+        ._title {
+            font-size: 1.15rem;
+            position: relative;
+            padding-left: 2rem;
+            &:before {
+                content: '0'counter(reflectItem)'.';
+                position: absolute;
+                top: 0;
+                left: 0;
+                font-weight: bold;
+                // font-size: 1.5rem;
+
+                
+            }
+        }
+        ._button {
+            border: none;
+            background: none;
+            font-size: 1.5rem;
+            color: $black;
+        }
+
+        ._form {
+            margin-bottom: 2rem;
+            margin-left: 2rem;
+            textarea {
+                font-size: 1.5rem;
+                background: $white;
+                padding: 2rem;
+                width: 100%;
+                border: none;
+                outline: none;
+                font-family: $font;
+            }
+        }
+    }
+}

@@ -49,16 +49,6 @@
         </div>
       </section>
 
-      <section class="section--lg">
-        <div class="cols">
-          <div class="col">
-            <div class="video">
-                <img src="@/assets/head.png" alt="">
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section>
         <div class="cols">
           
@@ -148,22 +138,121 @@
         </div>
       </section>
 
-      <section>
+      <div class="block -bg">
+
+        <section>
+          <div class="cols">
+            <div class="col">
+              <h1 class="-center">
+                <span class="subtitle">Task</span>
+                Reflect
+              </h1>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="cols">
+            <div class="col">
+              <div>
+                <p>Reflect on your experience of interviewing and transcribing by asking yourself the following questions</p>
+                <ul class="reflects">
+                  <li>
+                      <div class="_expand">
+                        <div class="_title">
+                          <span>What went well?</span>
+                        </div>
+                        <div class="_button">+</div>
+                      </div>
+                      <div class="_form">
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                      </div>
+                  </li>
+                </ul>
+                <p>Write up your answers in a short paragraph (about 500 words) and upload to XXXXX on Moodle or post on a discussion board. </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+
+
+    <section>
         <div class="cols">
           <div class="col">
-            <h1 class="-center">
-              <span class="subtitle">Task</span>
-              Reflect
-            </h1>
+            <div>
+              <h2 class="-center">Documents</h2>
+              <ul class="downloads">
+
+                <li class="download">
+                  <div class="_img">
+                    <img src="@/assets/icon-pdf.png" alt="">
+                  </div>
+                  <div class="_content">
+                    <div class="_title">RESEARCH CONSENT FORM A</div>
+                    <div class="_icon">
+                      <img src="@/assets/download.svg" alt="">
+                    </div>
+                  </div>
+                </li>
+
+              </ul>
+
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="section--lg">
+
+      <section>
         <div class="cols">
           <div class="col">
-            <div class="video">
-                <img src="@/assets/head.png" alt="">
+            <div>
+              <h2 class="-center">What next</h2>
+              <ul class="tabs">
+
+                <li class="tab">
+                  <div class="_img">
+                    <div class="_count">2</div>
+                    <img src="@/assets/head.png" alt="">
+                  </div>
+                  <div class="_content">
+                    <div class="_title">Input and Reflect </div>
+                    <div class="_icon">
+                      <img src="@/assets/arrow-right.svg" alt="">
+                    </div>
+                  </div>
+                </li>
+
+                <li class="tab">
+                  <div class="_img">
+                    <div class="_count">3</div>
+                    <img src="@/assets/head.png" alt="">
+                  </div>
+                  <div class="_content">
+                    <div class="_title">Interview Two</div>
+                    <div class="_icon">
+                      <img src="@/assets/arrow-right.svg" alt="">
+                    </div>
+                  </div>
+                </li>
+                
+                <li class="tab">
+                  <div class="_img">
+                    <div class="_count">4</div>
+                    <img src="@/assets/head.png" alt="">
+                  </div>
+                  <div class="_content">
+                    <div class="_title">Reflect and Recommend</div>
+                    <div class="_icon">
+                      <img src="@/assets/arrow-right.svg" alt="">
+                    </div>
+                  </div>
+                </li>
+              </ul>
+
             </div>
           </div>
         </div>
@@ -177,7 +266,7 @@ import { http } from '../utils/ajax'
 export default {
   name: 'Home',
   data: () => ({
-    content: null
+    content: 'one'
   }),
   created() {
     http.get(`homepage`)

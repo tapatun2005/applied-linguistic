@@ -67,6 +67,7 @@
               <ul class="tabs">
                 <li class="tab">
                   <div class="_img">
+                    <div class="_count">1</div>
                     <img src="@/assets/head.png" alt="">
                   </div>
                   <div class="_content">
@@ -79,6 +80,7 @@
 
                 <li class="tab">
                   <div class="_img">
+                    <div class="_count">2</div>
                     <img src="@/assets/head.png" alt="">
                   </div>
                   <div class="_content">
@@ -91,6 +93,7 @@
 
                 <li class="tab">
                   <div class="_img">
+                    <div class="_count">3</div>
                     <img src="@/assets/head.png" alt="">
                   </div>
                   <div class="_content">
@@ -103,6 +106,7 @@
                 
                 <li class="tab">
                   <div class="_img">
+                    <div class="_count">4</div>
                     <img src="@/assets/head.png" alt="">
                   </div>
                   <div class="_content">
@@ -127,7 +131,7 @@ import { http } from '../utils/ajax'
 export default {
   name: 'Home',
   data: () => ({
-    content: null
+    content: 'one'
   }),
   created() {
     http.get(`homepage`)
