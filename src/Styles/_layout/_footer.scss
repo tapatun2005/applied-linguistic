@@ -1,6 +1,11 @@
 footer {
     background-color: $black;
-    padding: 40px;
+    padding: 20px 40px 10px;
+}
+
+.footer  {
+    padding: 100px 40px 20px;
+    background-color: darken($black, 1);
 }
 
 .footer {
@@ -23,6 +28,25 @@ footer {
         a {
             color: rgba(white, .5);
             text-decoration: none;
+        }
+    }
+
+    &__desc {
+        color: $white;
+        margin-bottom: 100px;
+        h2 {
+            color: $white;
+            span {
+                font-size: .5em;
+            }
+        }
+    }
+
+    &__img {
+        margin-top: 40px;
+        max-width: 350px;
+        @media (max-width: $tablet) {
+            margin-top: 0;
         }
     }
 }

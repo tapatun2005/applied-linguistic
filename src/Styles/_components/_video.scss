@@ -68,7 +68,7 @@
     pointer-events: none;
     opacity: 0;
     transition: all .2s ease-in-out;
-    background: black;
+    background: rgba($black, .85);
 
     &__wrapper {
         width: 100%;

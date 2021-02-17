@@ -199,7 +199,7 @@
                         <div class="_button"></div>
                       </div>
                       <div class="_form">
-                        <textarea name="" id="" cols="30" rows="10" v-model="answers.one"></textarea>
+                        <textarea name="" id="" cols="30" rows="10" v-model="answers.one.value" @input="checkEmpty($event)"></textarea>
                       </div>
                   </li>
 
@@ -212,7 +212,7 @@
                         <div class="_button"></div>
                       </div>
                       <div class="_form">
-                        <textarea name="" id="" cols="30" rows="10" v-model="answers.two"></textarea>
+                        <textarea name="" id="" cols="30" rows="10" v-model="answers.two.value" @input="checkEmpty($event)"></textarea>
                       </div>
                   </li>
 
@@ -224,7 +224,7 @@
                         <div class="_button"></div>
                       </div>
                       <div class="_form">
-                        <textarea name="" id="" cols="30" rows="10" v-model="answers.three"></textarea>
+                        <textarea name="" id="" cols="30" rows="10" v-model="answers.three.value" @input="checkEmpty($event)"></textarea>
                       </div>
                   </li>
                   
@@ -236,7 +236,7 @@
                         <div class="_button"></div>
                       </div>
                       <div class="_form">
-                        <textarea name="" id="" cols="30" rows="10" v-model="answers.four"></textarea>
+                        <textarea name="" id="" cols="30" rows="10" v-model="answers.four.value" @input="checkEmpty($event)"></textarea>
                       </div>
                   </li>
 
@@ -248,7 +248,7 @@
                         <div class="_button"></div>
                       </div>
                       <div class="_form">
-                        <textarea name="" id="" cols="30" rows="10" v-model="answers.five"></textarea>
+                        <textarea name="" id="" cols="30" rows="10" v-model="answers.five.value" @input="checkEmpty($event)"></textarea>
                       </div>
                   </li>
 
@@ -260,14 +260,22 @@
                         <div class="_button"></div>
                       </div>
                       <div class="_form">
-                        <textarea name="" id="" cols="30" rows="10" v-model="answers.six"></textarea>
+                        <textarea name="" id="" cols="30" rows="10" v-model="answers.six.value" @input="checkEmpty($event)"></textarea>
                       </div>
                   </li>
 
 
 
                 </ul>
-                <p>Write up your answers in a short paragraph (about 500 words) and upload to XXXXX on Moodle or post on a discussion board. </p>
+
+                <div class="submit-form">
+                  <h3>Submit answers</h3>
+                  <div class="participant">
+                      <input type="text" v-model="name" placeholder="Your name">
+                      <input type="email" v-model="email" placeholder="Your contact email">
+                  </div>
+                  <button class="btn" @click="sendEmail()">Send answer</button>
+                </div>
               </div>
             </div>
           </div>
@@ -378,13 +386,33 @@ export default {
   name: 'Home',
   data: () => ({
     content: 'one',
+    email: '',
+    name: '',
     answers: {
-      one: '',
-      two: '',
-      three: '',
-      four: '',
-      five: '',
-      six: ''
+      one: {
+        title: 'What went well?',
+        value: ''
+      },
+      two: {
+        title: 'What contribution did you make to the interview? ',
+        value: ''
+      },
+      three: {
+        title: 'What contribution did the interviewee make to the interview?',
+        value: ''
+      },
+      four: {
+        title: 'How long did the transcription take?',
+        value: ''
+      },
+      five: {
+        title: 'What is the relationship between the transcription and the audio/video recording?',
+        value: ''
+      },
+      six: {
+        title: 'What you might do differently next time?',
+        value: ''
+      }
     }
   }),
   created() {
@@ -414,10 +442,6 @@ export default {
         const iframe = popup.querySelector('iframe')
         iframe.src = iframe.dataset.src
        popup.classList.add('is-active')
-
-
-
-
     },
     closeVideo(event) {
         const target = event.currentTarget
@@ -425,6 +449,35 @@ export default {
         const iframe = parent.querySelector('iframe')
         iframe.src = ''
         parent.classList.remove('is-active')
+    },
+    checkEmpty(event) {
+      const target = event.currentTarget
+      const parent = target.parentNode.parentNode
+      console.log(target.value)
+      if (target.value === '') {
+        parent.classList.add('is-empty')
+        parent.classList.remove('is-not-empty')
+      } else {
+        parent.classList.remove('is-empty')
+        parent.classList.add('is-not-empty')
+      }
+    },
+    sendEmail(){
+        const subject = 'Part one'
+        const mailtoBody = `
+Name: ${ this.name === '' ? 'N/A' : this.name }%0A 
+Contact email: ${ this.email === '' ? 'N/A' : this.email }%0A 
+%0A
+%0A
+${Object.keys(this.answers).map(key => `
+${this.answers[key].title}%0A
+${this.answers[key].value}%0A
+%0A
+`).join('')
+}
+`
+
+       window.location.href = `mailto:you@example.com?subject=${subject}&body=${mailtoBody}`
     }
   }
 }
