@@ -35,11 +35,17 @@
             background: none;
             font-size: 1.5rem;
             color: $black;
+            margin-left: 2rem;
+
+            &:after {
+                content: "+"
+            }
         }
 
         ._form {
             margin-bottom: 2rem;
             margin-left: 2rem;
+            display: none;
             textarea {
                 font-size: 1.5rem;
                 background: $white;
@@ -48,6 +54,17 @@
                 border: none;
                 outline: none;
                 font-family: $font;
+            }
+        }
+
+        &.is-active {
+            ._form {
+                display: block;
+            }
+            ._button {
+                &:after {
+                    content: "-"
+                }
             }
         }
     }

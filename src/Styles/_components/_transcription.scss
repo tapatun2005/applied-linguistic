@@ -1,0 +1,36 @@
+.transcription {
+    margin: 2rem 0 3rem;
+    padding: 2rem 2rem;
+    background: rgba($white, .25);
+    // color: $black;
+    font-family:'Courier New', Courier, monospace;
+
+    abbr {
+        cursor: pointer;
+        border-bottom: none !important;
+        text-decoration: none !important;
+    }
+
+    ._legend {
+        span {
+            display: block;
+        }
+    }
+
+    ._lines {
+        margin-top: 3rem;
+
+        ._line {
+            font-size: .85rem;
+            white-space: nowrap;
+            @media (max-width: $tablet) {
+                font-size: 1.75vw;
+                line-height: 2.5vw;
+            }
+
+            &:hover {
+                background: rgba($white, .1);
+            }
+        }
+    }
+}

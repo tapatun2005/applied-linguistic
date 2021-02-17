@@ -2,11 +2,120 @@
     width: 100%;
     padding-top: 57%;
     background: rgba($black,.1);
+    cursor: pointer;
+    transition: background .2s ease-in-out;
+
+    &__wrapper {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
     img {
         position: absolute;
-        bottom: -50px;
-        left: 50%;
-        transform: translate(-50%);
+        bottom: 0px;
+        left: 10%;
         height: calc(100% + 100px);
+        transition: all .25s ease-in-out;
+        transform-origin: bottom center;
+    }
+    i {
+        position: absolute;
+        width: 75px;
+        height: 75px;
+        top: 50%;
+        left: 80%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        border: 2px solid rgba($black, 1);
+        transition: all .2s ease-in-out;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 55%;
+            transform: translate(-50%, -50%);
+            border-top: 16px solid transparent;
+            border-bottom: 16px solid transparent;
+            border-left: 25px solid rgba($black, 1);
+            transition: all .2s ease-in-out;
+        }
+    }
+
+    &:hover {
+        i {
+            border: 2px solid rgba($white, 1);
+             &:after {
+                border-left-color: rgba($white, 1);
+             }
+        }
+        img {
+            transform: translate(-5px);
+        }
+    }
+}
+
+.video__popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9;
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+    transition: all .2s ease-in-out;
+    background: black;
+
+    &__wrapper {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__frame {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: calc(100% - 3rem);
+        padding-top: calc(57.5% - 3rem);
+        @media (max-width: $tablet) {
+            width: 100%;
+            padding-top: 57.5%;
+        }
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        width: 45px;
+        height: 45px;
+        background: $white;
+        border-radius: 50%;
+        &:after {
+            content: '+';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            font-size: 1.5rem;
+        }
+    }
+
+    &.is-active {
+        visibility: visible;
+        pointer-events: auto;
+        opacity: 1;
     }
 }

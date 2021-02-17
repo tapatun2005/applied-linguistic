@@ -1,0 +1,28 @@
+.dictionary {
+    margin: 3rem 0;
+    ._item {
+        display: flex;
+        border-bottom: 1px solid rgba($black, .1);
+        padding: 10px 0;
+        &:first-child {
+            border-top: 1px solid rgba($black, .1);
+        }
+        & > * {
+            flex: 1 0 0;
+        }
+        ._term {
+            font-family:'Courier New', Courier, monospace;
+            white-space: nowrap;
+            span {
+                display: block;
+                &.-underlined {
+                    text-decoration: underline;
+                }
+            }
+        }
+        ._desc {
+            font-size: .9rem;
+            font-weight: bold;
+        }
+    }
+}

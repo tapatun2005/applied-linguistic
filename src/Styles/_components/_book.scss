@@ -4,6 +4,10 @@
     font-family: "Times Roman";
     line-height: 175%;
     color: $white;
+    height: 75vh;
+    column-width: 50vw;
+    column-gap: 50vw;
+    overflow: hidden;
 
     &:before {
         content: '';
@@ -20,13 +24,17 @@
         font-size: 2.5rem;
     }
 
+    h4 {
+        text-transform: inherit;  
+    }
+
     p {
         margin-bottom: 50px;
     }
 
     table, td, th {
         border-collapse: collapse;
-        border: 1px solid rgba($black, .5);
+        border: 1px solid rgba($white, .5);
         padding: 5px 10px;
     }
 
