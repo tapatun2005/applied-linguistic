@@ -3,7 +3,12 @@
     top: 2rem;
     left: 2rem;
     z-index: 2;
+    @media (max-width: $mobile) {
+        top: 0.5rem;
+        left: 1rem;
+    }
     img {
         width:  32px;
     }
+
 }

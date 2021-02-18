@@ -5,10 +5,15 @@
     width: 45px; 
     height: 45px;
     border-radius: 5px;
-    background: white;
+    background: $white;
     cursor: pointer;
     z-index: 2;
     font-size: 1.5rem;
+
+    @media (max-width: $mobile) {
+        top: 0.2rem;
+        right: 0.2rem;
+    }
 
     span {
         display: block;
@@ -23,18 +28,27 @@ nav {
     position: fixed;
     z-index: 1;
     height: 100%;
-    left: 100%;
-    top: 0;
-    transition: transform .2s ease-in-out;
+    transition: all .2s ease-in-out;
     padding: 5rem;
     background: white;
     box-shadow: -3px 0 15px rgba(black, .1);
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 100%;
-    max-width: 200px;
+    visibility: hidden;
+    opacity: 0;
+
+    a {
+        text-decoration: none;
+        color: $black;
+        font-size: 1.5rem;
+        margin: 0.5rem 0;
+    }
+
     &.is-active {
-        transform: translate(-100%);
+        visibility: visible;
+        opacity: 1;
     }
 }

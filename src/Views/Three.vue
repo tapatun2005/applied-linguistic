@@ -1,5 +1,5 @@
 <template>
-  <div v-if="content" class="container">
+  <div class="container">
       
       <div class="cols">
         <div class="col h--full f-justify--center f-direction--column">
@@ -14,7 +14,7 @@
             <img src="@/assets/arrow-down.svg" alt="">
           </div>
         </div>
-        <div class="col f-direction--column f-justify--center">
+        <div class="col f-direction--column f-justify--center m-hidden">
           <div class="img img--intro">
             <img class="" src="@/assets/head.png">
           </div>
@@ -24,10 +24,20 @@
       <section>
         <div class="cols">
           
-          <div class="col-1">
+          <div class="col-1 -m-bottom">
             <div class="video">
-                <img src="@/assets/head.png" alt="">
-            </div>
+                <div class="video__wrapper" @click="showVideo($event)">
+                  <img src="@/assets/rachel.png" alt="">
+                  <i></i>
+                </div>
+                <div class="video__popup">
+                  <div class="video__popup__wrapper" @click="closeVideo($event)"></div>
+                  <div class="video__popup__frame">
+                    <iframe data-src="https://www.youtube.com/embed/Lr3AGLVpv0Y?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                  <div class="video__popup__close" @click="closeVideo($event)"></div>
+                </div>
+            </div>            
           </div>
 
           <div class="col-3 f-justify--center">
@@ -173,18 +183,96 @@
                 <p>Think about the differences between your first and second interviews. Reflect on your experience of interviewing and transcribing by asking yourself the following questions:</p>
                 <ul class="reflects">
                   <li>
-                      <div class="_expand">
+                      <div class="_expand" @click="expand($event)">
                         <div class="_title">
                           <span>What went well?</span>
                         </div>
-                        <div class="_button">+</div>
+                        <div class="_button"></div>
                       </div>
                       <div class="_form">
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                        <textarea name="" id="" cols="30" rows="10" v-model="answers.one.value" @input="checkEmpty($event)"></textarea>
                       </div>
                   </li>
+
+
+                  <li>
+                      <div class="_expand" @click="expand($event)">
+                        <div class="_title">
+                          <span>What contribution did you make to the interview?</span>
+                        </div>
+                        <div class="_button"></div>
+                      </div>
+                      <div class="_form">
+                        <textarea name="" id="" cols="30" rows="10" v-model="answers.two.value" @input="checkEmpty($event)"></textarea>
+                      </div>
+                  </li>
+
+                  <li>
+                      <div class="_expand" @click="expand($event)">
+                        <div class="_title">
+                          <span>What contribution did the interviewee make to the interview?</span>
+                        </div>
+                        <div class="_button"></div>
+                      </div>
+                      <div class="_form">
+                        <textarea name="" id="" cols="30" rows="10" v-model="answers.three.value" @input="checkEmpty($event)"></textarea>
+                      </div>
+                  </li>
+                  
+                  <li>
+                      <div class="_expand" @click="expand($event)">
+                        <div class="_title">
+                          <span>How long did the transcription take?</span>
+                        </div>
+                        <div class="_button"></div>
+                      </div>
+                      <div class="_form">
+                        <textarea name="" id="" cols="30" rows="10" v-model="answers.four.value" @input="checkEmpty($event)"></textarea>
+                      </div>
+                  </li>
+
+                  <li>
+                      <div class="_expand" @click="expand($event)">
+                        <div class="_title">
+                          <span>What is the relationship between the transcription and the audio/video recording? </span>
+                        </div>
+                        <div class="_button"></div>
+                      </div>
+                      <div class="_form">
+                        <textarea name="" id="" cols="30" rows="10" v-model="answers.five.value" @input="checkEmpty($event)"></textarea>
+                      </div>
+                  </li>
+
+                  <li>
+                      <div class="_expand" @click="expand($event)">
+                        <div class="_title">
+                          <span>What you might do differently next time? </span>
+                        </div>
+                        <div class="_button"></div>
+                      </div>
+                      <div class="_form">
+                        <textarea name="" id="" cols="30" rows="10" v-model="answers.six.value" @input="checkEmpty($event)"></textarea>
+                      </div>
+                  </li>
+
+                  <li>
+                      <div class="_expand" @click="expand($event)">
+                        <div class="_title">
+                          <span>How did the experience of your first interview inform your approach to the second interview? </span>
+                        </div>
+                        <div class="_button"></div>
+                      </div>
+                      <div class="_form">
+                        <textarea name="" id="" cols="30" rows="10" v-model="answers.seven.value" @input="checkEmpty($event)"></textarea>
+                      </div>
+                  </li>
+
                 </ul>
-                <p>Write up your answers in a short paragraph (about 500 words) and upload to XXXXX on Moodle or post on a discussion board. </p>
+
+                <div class="submit-form">
+                  <button class="btn" @click="sendEmail()">Email the answers</button>
+                </div>
+
               </div>
             </div>
           </div>
@@ -198,48 +286,7 @@
           <div class="col">
             <div>
               <h2 class="-center">What next</h2>
-              <ul class="tabs">
-
-                <li class="tab">
-                  <div class="_img">
-                    <div class="_count">2</div>
-                    <img src="@/assets/head.png" alt="">
-                  </div>
-                  <div class="_content">
-                    <div class="_title">Input and Reflect </div>
-                    <div class="_icon">
-                      <img src="@/assets/arrow-right.svg" alt="">
-                    </div>
-                  </div>
-                </li>
-
-                <li class="tab">
-                  <div class="_img">
-                    <div class="_count">3</div>
-                    <img src="@/assets/head.png" alt="">
-                  </div>
-                  <div class="_content">
-                    <div class="_title">Interview Two</div>
-                    <div class="_icon">
-                      <img src="@/assets/arrow-right.svg" alt="">
-                    </div>
-                  </div>
-                </li>
-                
-                <li class="tab">
-                  <div class="_img">
-                    <div class="_count">4</div>
-                    <img src="@/assets/head.png" alt="">
-                  </div>
-                  <div class="_content">
-                    <div class="_title">Reflect and Recommend</div>
-                    <div class="_icon">
-                      <img src="@/assets/arrow-right.svg" alt="">
-                    </div>
-                  </div>
-                </li>
-              </ul>
-
+              <Tabs/>
             </div>
           </div>
         </div>
@@ -250,21 +297,44 @@
 
 <script>
 import Dictionary from '../Components/Dictionary.vue'
-import { http } from '../utils/ajax'
+import Tabs from '../Components/Tabs'
+import { general } from '../mixins/general'
 export default {
-  components: { Dictionary },
-  name: 'Home',
+  components: { Dictionary, Tabs },
+  name: 'Three',
+  mixins: [general],
   data: () => ({
-    content: 'one'
-  }),
-  created() {
-    http.get(`homepage`)
-      .then(response => {
-        this.content = response.data
-      })
-      .catch(e => {
-        console.log(e)
-      })
-  }
+    subject: "Interview | Part 3",
+    answers: {
+      one: {
+        title: 'What went well?',
+        value: ''
+      },
+      two: {
+        title: 'What contribution did you make to the interview?  ',
+        value: ''
+      },
+      three: {
+        title: 'What contribution did the interviewee make to the interview? ',
+        value: ''
+      },
+      four: {
+        title: 'How long did the transcription take? ',
+        value: ''
+      },
+      five: {
+        title: 'What is the relationship between the transcription and the audio/video recording?',
+        value: ''
+      },
+      six: {
+        title: 'What you might do differently next time?',
+        value: ''
+      },
+      seven: {
+        title: 'How did the experience of your first interview inform your approach to the second interview? ',
+        value: ''
+      }
+    }
+  })
 }
 </script>

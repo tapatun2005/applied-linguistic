@@ -5,9 +5,6 @@
     line-height: 175%;
     color: $white;
     height: 75vh;
-    column-width: 50vw;
-    column-gap: 50vw;
-    overflow: hidden;
 
     &:before {
         content: '';
@@ -22,13 +19,17 @@
         font-style: italic;
         text-transform: inherit;
         font-size: 2.5rem;
+        @media (max-width: $mobile) {
+            font-size: 1.5rem;
+        }
     }
 
     h4 {
         text-transform: inherit;  
     }
 
-    p {
+    p,
+    blockquote {
         margin-bottom: 50px;
     }
 
@@ -36,6 +37,10 @@
         border-collapse: collapse;
         border: 1px solid rgba($white, .5);
         padding: 5px 10px;
+        @media (max-width: $mobile) {
+            // padding: 3px 3px;
+            font-size: .85rem;
+        }
     }
 
     table {
@@ -44,5 +49,87 @@
 
     ol {
         margin-bottom: 50px;
+    }
+
+    &__nav {
+        position: absolute;
+        bottom: 1rem;
+        left: 50%;
+        transform: translate(-50%);
+        color: $white;
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+    }
+
+    &__more {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%);
+        display: block;
+        width: 100vw;
+        background: lighten($green, 15);
+        padding: 1rem;
+        cursor: pointer;
+        transition: all .2s ease-in-out;
+        ._wrap {
+            margin: 0 auto;
+            max-width: 650px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translate(-50%);
+            height: 4rem;
+            width: 100vw;
+            background: linear-gradient(0deg, rgba($green,1) 0%, rgba($green,0) 100%);
+            pointer-events: none;
+        }
+        span {
+            color: $white;
+            font-size: 1.25rem;
+            text-align: center;
+            display: block;
+            &:nth-child(2) {
+                display: none;
+            }    
+            &:nth-child(3) {
+                &:after {
+                    content: "+";
+                    font-size: 1.5rem;
+                    color: $white;
+                }
+            } 
+        }
+
+        &:hover {
+            background: lighten($green, 5);
+        }
+
+        &.is-active {
+            span {
+                &:nth-child(1) {
+                    display: none;
+                }  
+                &:nth-child(2) {
+                    display: block;
+                }  
+                &:nth-child(3) {
+                    &:after {
+                        content: "-";
+                    }
+                } 
+            }
+        }
+    }
+
+    &.is-active {
+        height: auto;
     }
 }

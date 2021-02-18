@@ -1,5 +1,10 @@
 .h {
     &--full {
         height: 100vh;
+        @media (max-width: $tablet) {
+            min-height: 50vh;
+            height: auto;
+            margin: 10rem 0 !important;
+        }
     }
 }

@@ -20,12 +20,19 @@
             width: 10px;
             height: 10px;
             border-radius: 50%;
+            @media (max-width: $mobile) {
+                top: 28px;
+            }
         }
 
         ._expand {
             padding: 2rem 0;
             display: flex;
             justify-content: space-between;
+
+            @media (max-width: $mobile) {
+                padding: 1rem 0;
+            }
         }
         ._title {
             font-size: 1.15rem;
@@ -40,6 +47,10 @@
                 // font-size: 1.5rem;
 
                 
+            }
+
+            @media (max-width: $mobile) {
+                font-size: 1rem;
             }
         }
         ._button {
@@ -58,6 +69,10 @@
             margin-bottom: 2rem;
             margin-left: 2rem;
             display: none;
+
+            @media (max-width: $mobile) {
+                margin-left: 0rem;
+            }
             textarea {
                 font-size: 1.5rem;
                 background: $white;
@@ -66,6 +81,10 @@
                 border: none;
                 outline: none;
                 font-family: $font;
+                @media (max-width: $mobile) {
+                    font-size: 1rem;
+                    padding: 1rem;
+                }
             }
         }
 
@@ -91,19 +110,5 @@
                 background-color: $green-light;
             }
         }
-    }
-}
-
-.submit-form {
-    margin-top: 100px;
-    input {
-        font-size: 1rem;
-        background: #fff;
-        padding: 0.5rem 1rem;
-        width: 100%;
-        border: none;
-        outline: none;
-        font-family: Avenir, Helvetica, Arial, sans-serif;
-        margin-bottom: 1rem;
     }
 }

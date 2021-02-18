@@ -5,6 +5,10 @@
     // color: $black;
     font-family:'Courier New', Courier, monospace;
 
+    @media (max-width: $mobile) {
+        padding: 1rem;
+    }
+
     abbr {
         cursor: pointer;
         border-bottom: none !important;

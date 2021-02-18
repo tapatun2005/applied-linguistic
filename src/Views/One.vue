@@ -1,5 +1,5 @@
 <template>
-  <div v-if="content" class="container">
+  <div class="container">
       
       <div class="cols">
         <div class="col h--full f-justify--center f-direction--column">
@@ -14,7 +14,7 @@
             <img src="@/assets/arrow-down.svg" alt="">
           </div>
         </div>
-        <div class="col f-direction--column f-justify--center">
+        <div class="col f-direction--column f-justify--center m-hidden">
           <div class="img img--intro">
             <img class="" src="@/assets/head.png">
           </div>
@@ -24,7 +24,7 @@
       <section>
         <div class="cols">
           
-          <div class="col-1">
+          <div class="col-1 -m-bottom">
             <div class="video">
                 <div class="video__wrapper" @click="showVideo($event)">
                   <img src="@/assets/rachel.png" alt="">
@@ -73,7 +73,7 @@
 
           <div class="col-3 f-justify--center">
             <article>
-              <h3>Things to prepare before interview</h3>
+              
               <ul class="tasks">
                 <li>The interview should last approximately 15-20 minutes. However, it is importable to give yourself and your participant extra time to get comfortable and make sure your recording equipment is set up.  </li>
                 <li>Arrange for you and your interviewee to be in a quiet and comfortable place for the time of the interview to minimise any interruptions.  </li>
@@ -269,12 +269,7 @@
                 </ul>
 
                 <div class="submit-form">
-                  <h3>Submit answers</h3>
-                  <div class="participant">
-                      <input type="text" v-model="name" placeholder="Your name">
-                      <input type="email" v-model="email" placeholder="Your contact email">
-                  </div>
-                  <button class="btn" @click="sendEmail()">Send answer</button>
+                  <button class="btn" @click="sendEmail()">Email the answers</button>
                 </div>
               </div>
             </div>
@@ -330,48 +325,7 @@
           <div class="col">
             <div>
               <h2 class="-center">What next</h2>
-              <ul class="tabs">
-
-                <li class="tab">
-                  <div class="_img">
-                    <div class="_count">2</div>
-                    <img src="@/assets/head.png" alt="">
-                  </div>
-                  <div class="_content">
-                    <div class="_title">Input and Reflect </div>
-                    <div class="_icon">
-                      <img src="@/assets/arrow-right.svg" alt="">
-                    </div>
-                  </div>
-                </li>
-
-                <li class="tab">
-                  <div class="_img">
-                    <div class="_count">3</div>
-                    <img src="@/assets/head.png" alt="">
-                  </div>
-                  <div class="_content">
-                    <div class="_title">Interview Two</div>
-                    <div class="_icon">
-                      <img src="@/assets/arrow-right.svg" alt="">
-                    </div>
-                  </div>
-                </li>
-                
-                <li class="tab">
-                  <div class="_img">
-                    <div class="_count">4</div>
-                    <img src="@/assets/head.png" alt="">
-                  </div>
-                  <div class="_content">
-                    <div class="_title">Reflect and Recommend</div>
-                    <div class="_icon">
-                      <img src="@/assets/arrow-right.svg" alt="">
-                    </div>
-                  </div>
-                </li>
-              </ul>
-
+              <Tabs/>
             </div>
           </div>
         </div>
@@ -381,13 +335,17 @@
 </template>
 
 <script>
-import { http } from '../utils/ajax'
+import Tabs from '../Components/Tabs'
+import { general } from '../mixins/general'
+
 export default {
-  name: 'Home',
+  mixins: [general],
+  name: 'One',
+  components: { 
+    Tabs
+  },
   data: () => ({
-    content: 'one',
-    email: '',
-    name: '',
+    subject: "Interview | Part 1",
     answers: {
       one: {
         title: 'What went well?',
@@ -414,71 +372,6 @@ export default {
         value: ''
       }
     }
-  }),
-  created() {
-    http.get(`homepage`)
-      .then(response => {
-        this.content = response.data
-      })
-      .catch(e => {
-        console.log(e)
-      })
-  },
-  methods: {
-    expand(event) {
-        const target = event.currentTarget
-        const parent = target.parentNode
-        const isOpen = parent.classList.contains('is-active')
-        parent.classList[isOpen ? 'remove' : 'add']('is-active')
-
-        if (!isOpen) {
-          parent.querySelector('textarea').focus()
-        }
-    },
-    showVideo(event) {
-      console.log('event')
-        const target = event.currentTarget
-        const popup = target.parentNode.querySelector('.video__popup')
-        const iframe = popup.querySelector('iframe')
-        iframe.src = iframe.dataset.src
-       popup.classList.add('is-active')
-    },
-    closeVideo(event) {
-        const target = event.currentTarget
-        const parent = target.parentNode
-        const iframe = parent.querySelector('iframe')
-        iframe.src = ''
-        parent.classList.remove('is-active')
-    },
-    checkEmpty(event) {
-      const target = event.currentTarget
-      const parent = target.parentNode.parentNode
-      console.log(target.value)
-      if (target.value === '') {
-        parent.classList.add('is-empty')
-        parent.classList.remove('is-not-empty')
-      } else {
-        parent.classList.remove('is-empty')
-        parent.classList.add('is-not-empty')
-      }
-    },
-    sendEmail(){
-        const subject = 'Part one'
-        const mailtoBody = `
-Name: ${ this.name === '' ? 'N/A' : this.name }%0A 
-Contact email: ${ this.email === '' ? 'N/A' : this.email }%0A 
-%0A
-%0A
-${Object.keys(this.answers).map(key => `
-${this.answers[key].title}%0A
-${this.answers[key].value}%0A
-%0A
-`).join('')
-}
-`
-
-       window.location.href = `mailto:you@example.com?subject=${subject}&body=${mailtoBody}`
-    }
-  }
+  })
 }
 </script>

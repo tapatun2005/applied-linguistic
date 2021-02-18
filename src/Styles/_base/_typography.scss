@@ -25,6 +25,9 @@ h6,
 h1 {
     font-size: 3.5rem;
     margin: 1rem 0;
+    @media (max-width: $mobile) {
+        font-size: 2.5rem;
+    }
     &.-lg {
         font-size: 7rem;
 
@@ -52,4 +55,7 @@ h1 {
 h2 {
     font-size: 3rem;
     font-weight: 100;
+    @media (max-width: $mobile) {
+        font-size: 2rem;
+    }
 }

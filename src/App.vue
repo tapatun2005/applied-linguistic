@@ -1,6 +1,8 @@
 <template>
-  <Logo/>
-  <Menu/>
+  <header>
+    <Logo/>
+    <Menu/>
+  </header>
   <main>
     <router-view/>
   </main>

@@ -1,20 +1,20 @@
 <template>
-  <div v-if="content" class="container">
+  <div class="container">
       
       <div class="cols">
         <div class="col h--full f-justify--center f-direction--column">
           <div class="intro">
             <h1 class="-md">
-              <span class="subtitle">Part 2</span>
-               Input and reflect
+              <span class="subtitle">Part 4</span>
+               Reflect and recommend
             </h1>
-            <p class="-lg">In part two we introduce you to some interview data that was collected as part of a community project we worked on, and on which our book is based.</p>
+            <!-- <p class="-lg">In part two we introduce you to some interview data that was collected as part of a community project we worked on, and on which our book is based.</p> -->
           </div>
           <div class="icon__scroll">
             <img src="@/assets/arrow-down.svg" alt="">
           </div>
         </div>
-        <div class="col f-direction--column f-justify--center">
+        <div class="col f-direction--column f-justify--center m-hidden">
           <div class="img img--intro">
             <img class="" src="@/assets/head.png">
           </div>
@@ -22,78 +22,83 @@
       </div>
 
       <section>
-        <div class="cols">
+        <div class="cols f-align--start">
           
-          <div class="col-1">
+          <div class="col-1 -m-bottom">
             <div class="video">
-                <img src="@/assets/head.png" alt="">
-            </div>
+                <div class="video__wrapper" @click="showVideo($event)">
+                  <img src="@/assets/rachel.png" alt="">
+                  <i></i>
+                </div>
+                <div class="video__popup">
+                  <div class="video__popup__wrapper" @click="closeVideo($event)"></div>
+                  <div class="video__popup__frame">
+                    <iframe data-src="https://www.youtube.com/embed/FuO5fwAYzrw?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                  <div class="video__popup__close" @click="closeVideo($event)"></div>
+                </div>
+            </div>            
           </div>
 
           <div class="col-3 f-justify--center">
             <article>
-              <p>We show you how we analysed this data and then introduce you to some recommendations that we made as a result of our study of the community project data. We ask you to reflect on our recommendations and write a short paragraph about what you might do differently in your second interview.</p>
-              <p>In the text box below is some background to a community project called ‘York’s Hidden Stories’ that we worked on and wrote about in our book. The numbers refer to page numbers in the printed book, in case you want to reference it in your own work.</p>
-              <p>As you read the text below, think about what you might include in a ‘background’ section to an account of your own interview project (the rationale for your research? Background information about your interviewee? Background information about you? Background information about your relationship with the interviewee? And so on)</p>
+              <h3>Why interview?</h3>
+              <p>In part four, we ask ‘why interview?’ and present a framework that classifies some possible answers to this question into the following four categories: </p>
+              <ul>
+                <li>Neo-positivist </li>
+                <li>Romantic </li>
+                <li>Constructionist </li>
+                <li>Transformative </li>
+              </ul>
+              <p>In chapter one of our book, York’s Hidden Stories: Interviews in Applied Linguistics, we asked this question. In the text below we try and answer the question, and then sort our answers to this question into the four categories listed above. </p>
+              <p>While you are reading the extract below, think about the ways in which interviews could be a product of the interaction between human (and non-human) participants? How might our thinking about the boundaries between humans (and non-humans) be challenged by these kinds of insights into interaction?  </p>
             </article>
           </div>
         </div>
       </section>
 
+
       <div class="block -bg -book">
         <section>
           <div class="cols">
             <div class="col">
-              <div class="book">
-                  <h3>Commumnity build</h3>
-                  <p>The community project that formed the basis of our study was initiated as a response to research commissioned by the Joseph Rowntree Foundation’s York Grants Committee in 2010. The research aimed to give a more accurate picture of York's Black, Asian and M inority Ethnic population, and to make related recommendations to local authorities. The results of the research revealed that York's population was much more diverse than had previously been suggested; identifying 78 different minority first languages spo ken in the City and estimating the minority ethnic population at approximately eleven per cent of York's total population. This figure was higher than that suggested by the 2001 census, in which only 2.1 per cent of respondents identified themselves as not White or White other, and 4.9 per cent as not White British, a much lower percentage than the UK average. These results were confirmed by statistics published from the 2011 census, which confirmed that 90.2 per cent of York’s population identified themsel ves as White British. In the report on their research, Craig et al emphasised the need for York to strengthen its commitment to racial equality and diversity, with a view to making a positive impact on the lives of ethnic minority groups in the City.</p>
-                  <p>The Centre for Global Education York, the initiators of the community project that provides the case study explored in this book, is a charity that works with the local community to offer support and training aimed at developing understanding of global issues. More specifically, it ‘aims to provide support, challenge, training and learning opportunities that allow interactive involvement with a variety of global educational projects and events’ (Centre for Global Education York, 2014). The Centre has been runni ng for more than thirty years, and for the past twenty years has been based at York St John University. As a ‘not - for - profit organisation’, it is overseen by a group of voluntary directors, and its work is delivered by self - employed associates who manage g rant - funded projects (Centre for Global Education York, 2014). The work of the Centre is mainly carried out in local schools, colleges and universities. In 2012 - 14, the Centre engaged with a wider audience through the community - based York’s Hidden Stories project, funded by the Joseph Rowntree Foundation, Comic Relief, Community York, and York St John University.</p>
-                  <p>The York’s Hidden Stories project was a response to the research, cited above, that emphasised the need for York to strengthen its commitment to racial equality and diversity (Craig et al. , 2010). The aim of the project was to capture and share the stories of York’s Black, Asian and Minority Ethnic residents, and involved fifteen participants who were interviewed about their experiences of moving to, and living in, York. On completion of the project, the project leaders’ evaluation suggested that their project had, ‘recorded, shared and celebrated the cultural heritage of York’s unseen and often unknown multicultural community that could result in disadvantage', noting that, ‘these individuals (the Black, Asian and Minority Ethnic participants) were trained to impart their unique cultural memories and experiences which are now part of York’s Community’</p>
-                  <p>The data that was used in our study consists of audio recordings of semi - structured interviews that were collected by the Centre for Global Education York as part of the York’s Hidden Stories project. In total, there are fifteen interviews in which one interviewee and two project leaders participate . Each interview lasts approximately one hour. Each participant was asked the same set of questions, see chapter three – Methodology, covering general information about the participant, their values, their life in their country of origin, and the changes t hey may have experienced since coming to York. The interviews aimed to provide an insight into peoples’ memories of their ‘home’ countries, and their experience of moving to and living in York.</p>
-                  <h3>The data</h3>
-                  <p>The case study used data collected by the Centre for Global Education as part of the York’s Hidden Stories project and consisted of fifteen semi - structured interviews, conducted by two project leaders who were both present at each interview, with the fifteen project participants. All the participants had been living in York for between two and fifty years, and had originally come to York from Africa, Asia, Latin America, the Caribbean or Europe.</p>
-                  <p>The project participants took part in the York’s Hidden Stories project through a series of workshops over th e course of six months. During that time the participants ‘were trained to impart their unique cultural memories and experiences which are now part of York’s Community’ (Centre for Global Education York, 2014). Towards the end of the community project, the participants were interviewed by the project leaders. Each participant was asked the following set of twenty - five questions (and some were asked additional questions):</p>
-                  <ol>
-                    <li>Where are you from?</li>
-                    <li>Tell us about your name, what does it mean?</li>
-                    <li>Where do you get your values from?</li>
-                    <li>What do you treasure the most in life?</li>
-                    <li>Has coming to York changed your values and what you treasure?</li>
-                    <li>What do you treasure the most about your home country?</li>
-                    <li>What do you treasure about York?</li>
-                    <li>Is there anything you feel you need in life?</li>
-                    <li>If I could grant you a wish, what would it be for you and for the world?</li>
-                    <li>What skills, talents and gifts do you think you have?</li>
-                    <li>Do you think those skills have been helpful during your life in York?</li>
-                    <li>If you hadn’t come to live in York, do you think you would be a different person?</li>
-                    <li>What differences do you see in citizens from your country and here in the UK?</li>
-                    <li>Who do you think you are?</li>
-                    <li>What were your first impressions of York?</li>
-                    <li>Was it easy to move to York?</li>
-                    <li>When you arrived in York, were there any people who helped you?</li>
-                    <li>If you could bring something from home to York, what would it be?</li>
-                    <li>If you could take something back home from York, what would it be?</li>
-                    <li>Do you think there is anything distinctive about people in York/Yorkshire?</li>
-                    <li>Are there any barriers you had to overcome in life?</li>
-                    <li>What helped you to overcome barriers?</li>
-                    <li>Has living in York created any barriers for you?</li>
-                    <li>Has living in York helped you to overcome certain barriers?</li>
-                    <li>Do you think in your home country that there are barriers that people have to overcome that are different or the same as for people in the UK?</li>
-                    <li>In five years’ time, where do you think you will be in life?</li>
-                  </ol>
-                  
-                  <p>Most of the project participants, and both i nterviewers, were multi - lingual. All the interviews were conducted in English and audio recorded. The length of the recordings is outlined in a table below.</p>
+              <div>
+                <div class="book">
+                    <h3>Why interview? </h3>
+                    
+                    <p>In the next part of this section, we consider a range of different ways of thinking about interviews and how these different conceptualisations of the genre might influence a researcher’s reasons for interviewing. We have already noted how frequently interviews are to be found in everyday life and in academic research; they are generally thought to be useful, flexible, easy to organise and fun. Underpinning the idea that interviews are ‘useful’ are a wide range of assumptions about the ‘content’ they generate and the way in which this content gets generated, the role of the interviewer and other aspects of the interview (for example, place and recording equipment), and the status of the interviewee as a person that can be separated both from the interviewer and from the context in which the interview takes place. Of them many possible ways of thinking about interviews, we have selected four to look at in some detail, and we very briefly mention a number of others for readers who may be interested in exploring these.  The four conceptualisations we explore here are: neo-positivist, romantic, constructionist and transformative. We have chosen these four because they are also the focus of a special issue of Applied Linguistics (Volume 32, Issue 1, 2011) that remains an important marker in the development of interview research in applied linguistics. In the next chapter of this book, we show how these four ways of thinking about interviews played out in the analysis of the interview data collected for the community project that forms the case study presented here. The brief mentions of other approaches aim to point at potential future directions for interview research.  </p>
+                    
+                    <p>If interviews are ‘obviously’ useful, flexible, easy to do and (maybe) fun, why should we (community activists or academic researchers) bother to think in any further detail about why we are using them to do our work? Methods of data collection and analysis have themselves become topics for discussion in the research literature, with users explaining what their preferred methods can be used to achieve and advising other users not to be inconsistent (for example, Talmy, 2010), or to misunderstand or confuse methods and the reasons for their use (for example, Braun and Clarke, 2019). In participating in the community project that we present here, we noticed that our own reasons for doing interviews (and therefore our understanding of the meaning and possible uses of interview data) were different from (what we understood of) the project leaders’, and maybe the participants’, reasons and understandings. These differences seemed like more than just different beliefs about the same ‘thing’, but like beliefs about different things. Thinking about these things became part of our study. We say more about why they did in the section below on the disciplinary context of our study. As we say above, the four conceptualisations we explore in this chapter are: neo-positivist, romantic, constructionist and transformative. We begin with the first two; both underpinned by the idea of the interview as a research instrument (Talmy, 2010). </p>
+                    
+                    <p>Neo-positivist reasons for choosing to interview are related to the assumption that interviews are an effective way of generating detailed accounts of events or thorough descriptions/explanations of beliefs and actions. Where the purpose of an interview is to uncover an accurate and detailed account, the interviewer is likely to consider themselves a neutral figure who, through careful preparation, aims to ask ‘good’ questions which reduce, or remove, bias in their findings. In this way, it is assumed, the interviewer produces good quality data that, in its straightforward relationship to the questions asked, is ‘valid’. According to Briggs (2007:555), researchers working in this tradition commonly portray interviews as carefully structured to ‘elicit inner worlds with minimal intervention’. This approach to interviewing is one which seeks to ‘mine the attitudes, beliefs and experiences of self-disclosing respondents’ (Talmy and Richards, 2010) who have been made to ‘forget about the [interview] event so that interviewers can access their ‘natural’ behaviour’ (De Fina and Perrino, 2011:1). Interview responses are thus assumed to be, and presented as, direct representations of people’s thoughts and experiences (Silverman, 2013). This rationale for interviews has been described as ‘you ask they answer, and then you know’ (Hollway, 2005:312). </p>
+                    
+                    <p>Another version of these beliefs is that interviews are thought to be/presented as a way of generating ‘true confessions’; self-revelations about thoughts, actions, and attitudes to events, which would not be possible without the empathetic skill of the interviewer. Where the interviewer aims to access ‘true confessions’, they are required to actively establish a positive rapport with the interviewee, allowing for an intimate conversation that provides insight into the authentic life-world of the interviewee. In contrast, establishing such a relationship is not likely to be part of the practice of interviews that are conducted for the reasons described in the previous paragraph. Those interviewers who aim to elicit detailed and accurate accounts are more likely to try not to create any kind of relationship with their interviewees, in the belief that a lack of neutrality could introduce bias into their data and undermine the validity of their findings. In a taxonomy of uses for and beliefs about interviews, Roulston (2010:51) categorises interviews that are undertaken for ‘neutral’ reasons as ‘neo-positivist’ and interviews undertaken for confessional reasons as ‘romantic’. Both neutral and confessional reasons for interviewing are ‘naturalistic’ (Silverman, 2004:iii) in the sense that the interviewers aim to document in detail the ‘real’ world of the interviewees in ways that, for example, questionnaires (lack of detail/depth) and observations (no access to the thinking of the participants) cannot.  </p>
+                    
+                    <p>In contrast to these neo-positivist/romantic ways of thinking about interviews, a constructionist perspective treats the interview as a socially-situated ‘speech event’ (Talmy and Richards, 2010:2) which actively shapes the participation of both interviewer and interviewee. This is an orientation to interviewing which understand interviews not as a ‘neutral’ research instrument but as a form of social practice’ Constructionist conceptualisations of interviews recognise the interactional context of the interviewee’s responses and treat these, not as direct representations of the interviewee’s thoughts and experiences but, as ‘situated accountings’ (Roulston, 2010:62). Holstein and Gubrium (2000 and 2004) similarly suggest that interviews should always be thought of as active meaning-making ventures in which it is not possible to divide the interviewer’s input and the participant’s interpretations. As Mann (2011:6) says, ‘all interviews are already sites of social interaction, where ideas, facts, views, details, and stories are collaboratively produced by interviewee and interviewer’. On interview questions, Clark and Schober say the following: </p>
 
-                  <p>It is important to note that the interviewees and interviewers were already familiar with each other prior to the interviewing, given that the interviewers had had a chance to build relationships with their interviewees over the course of six months of wor kshops and events. Garton and Copland (2010) refer to these types of interviews, where there is a prior relationship between interviewers and interviewees, as 'acquaintance interviews'. They stress that a prior relationship, or lack of one, can have a prof ound effect on the data that gets generated in interview talk, and suggest that participants of acquaintance interviews should be made aware of the impact a prior relationship may have on the interaction. Mann (2016) argues that familiarity can be both an advantage and a disadvantage. Where the interviewer enters in to the interaction in the hope of achieving a deeper understanding of their interviewee’s perspective (what we describe in chapter one as a ‘romantic’ assumption), it can help them to feel bette r able to understand what the interviewee ‘really means’. Where the interviewer enters in to the interaction with a neo - positivist perspective, familiarity may feel like a disadvantage, in the fear that they will be encouraged to engage with their intervie wee’s responses through the lens of their own prior experiences. For researchers who enter into an acquaintance interview with a constructionist perspective, familiarity is neither an advantage or a disadvantage, but an inevitable feature of all interactio n that is to be noted (and perhaps studied, as part of the analysis of the interview data)</p>
+                    <blockquote>It is futile to search for truly neutral questions. They don’t exist. Every question carries presuppositions, so every question establishes a perspective. So for each question we must ask: Is the perspective taken really the one from which we want the respondent to answer? If the answer is yes – if we can justify the perspective – then we can also justify the question. (Clark and Schober, 1992:30) </blockquote>
 
-                  <p>We assume, but can’t be sure, that the leaders of the community project that resulted in the fifteen interviews built relationships with the participants through workshop and events in the six months prior in order to deliberately create ‘acquaintance’ interviews, with a view to achieving a deeper ‘understanding’ of the stories that were generated. It may be the case, however, that the project leaders built these r elationships simply in order to create longer answers, generating more data for analysis, or that they saw the six months of workshops and events held prior to the interviews as a separate stage of the project, with no consequences for the interviews. It i s also possible, that the project leaders were aware of the transformative power of interviews; aiming to use their interview data and any discussion of their findings to benefit the project participants, by raising awareness of aspects of their lives or c hallenging interpretations of their experience in order to change the attitudes of their fellow residents of the City of York.</p>
-                  
-                  <p>Given that we are now unable to ask our clients about their rationale for the design of their project, we would advise other app lied linguists (including ourselves in future) to discuss the design of a project before it begins, so that project leaders, participants and researchers are, as far as possible, aware of the assumptions behind, and the consequences of, their decisions fro m the very start.</p>
+                    <p>In summary, a constructionist approach assumes that interviews do not stand for anything other than themselves, and that interview data can only tell us about how the participants ‘do’ interviewing at the time of their interaction. A constructionist approach, however, does allow us to observe the mechanics of how actual life stories get made and distributed, and, if we wish, to speculate on the possible consequences of these life stories for the interviewees.</p>
 
+                    <p>We have presented three main ways of thinking about interviews: neo-positivist/romantic and constructionist. After Roulston (2010), we are calling our fourth and final category ‘transformative’. Transformative conceptualisations of interviews take as a starting point the belief that neo-positivist/romantic (and perhaps some constructionist) approaches fail to pay sufficient attention to the complexities of our gendered, socially and ethnically stratified world, and of our own thinking and writing. Highlighting the form of the word itself, Schostak says,  </p>
+
+                    <blockquote>The inter-view maps what is at stake in the multiplicity of views that create the everyday fields of struggle. […] What is worth fighting for, arguing for, building, emerges through the inter-view, the dialogue of the views of people who seek recognition and representation of their differences. (Schostak, 2006:178) </blockquote>
+
+                    <p>From a transformative perspective, the act of interviewing is underpinned by an awareness of the complex relationship between interviewer and interviewee. The participants in the act work jointly to develop new understandings of their experiences and challenge normative interpretations. The participants may also aim to use their interview data and any discussion of their findings to benefit the interviewees, by raising awareness of aspects of their lives or challenging interpretations of their experience in order to change public attitudes and, perhaps, government policy or law. Marn and Wolgemuth (2017:365) sum up this approach to interviews as follows, ‘transformative interviewers assume that all human interaction is interventional in some way and therefore seek to conduct interviews to intervene with intention.’ </p>
+
+                    <p>So far, we have considered four ways of thinking about interviews (neo-positivist, romantic, constructionist and transformative) and how these different conceptualisations of the genre might influence a researcher’s reasons for interviewing. In chapter two, we exemplify a number of these ways of thinking about interviews with reference to our case study. In the next section of this chapter, we consider some ways of interviewing and analysing interview data. </p>
+
+                    <p>Finally, in this section, we briefly point to two other ways of thinking about the use of interviews, both of which are extensions of a transformative approach. The first way uses interviews to achieve de-colonising aims (for example, avoiding using terms that are not relevant or welcomed by the participants, not claiming knowledge about ‘others’, and providing space for participants to reflect on and use their peers’ accounts of their experiences) (see for example, Bartlett et al, 2007). The second way draws on new materialist ideas about the relationships between the interviewee’s contribution and the material aspects of the situation in which the interview takes place (including, for example, interviewer, recording devices, place, time, assumption about possible audiences). We come back to these ‘new’ ways in chapter 5, when we speculate on possible ways out of the (binary) categorisation of interviews as either research instruments or interviews as social practice. </p>
+                </div>
               </div>
             </div>
           </div>
         </section>
+        <div class="book__more" @click="readMore($event)">
+          <div class="_wrap">
+            <span>Read more</span><span>Show less</span><span></span>
+          </div>
+        </div>
       </div>
       
       
@@ -101,14 +106,11 @@
         <div class="cols">
           <div class="col f-justify--center">
             <div class="content">
-              <p>Based on the data described above we had two research questions that we asked in our study </p>
-              <ul class="tasks">
-                <li>What themes occur in the interviews with York’s Black, Asian and Minority Ethnic residents on the topics identified by the client?</li>
-                <li>How do the interviewers’ contributions shape the interaction with the interviewees?</li>
-              </ul>
-              <p>Each of the questions required two different approaches to data analysis: thematic analysis and conversation analysis.</p>
-              <p>The text in the box below is from our book and, again, the page numbers are there in case you want to reference our work.</p>
-              <p>In this extract, we show how we analysed our data using two different approaches to analysis. While you are reading the text below, think about the possible advantages and disadvantages of our choices. Think also about whether you might want to use either of these two approaches to analyse your own data:</p>
+
+              <h3>Transcription</h3>
+              <p>In this section, we ask you to think about how transcription is a precursor to, and an inseparable part of, analysis.  </p>
+              <p>While you are reading the extract below, think back to your experience of transcription in earlier parts of these materials. Did transcription feel like a mechanical or a creative process? Were you always sure how to transcribe your recording? When you weren’t sure how to transcribe something, what did you do? How did you decide what to NOT to transcribe? What are the main differences between the spoken text (the recording) and the written text (the transcription)? </p>
+              <p>We said this is in chapter three of <i>York’s Hidden Stories</i>:</p>
             </div>
           </div>
         </div>
@@ -123,42 +125,27 @@
           <div class="cols">
             <div class="col">
               <div class="book">
-                  <h3>Thematic analysis</h3>
-                  <p>We used what the project leaders called ‘thematic analysis’ to answer research question one of our study, in order to summarise answers on the topics identified by our client.  </p>
-                  <p>Thematic analysis is a common way of analysing qualitative data in order to report what seems to the analyst to be the key issues (or ‘phenomena’) that are present in the data (Gibbs, 2007). More specifically, it has been described as a method of ‘identifying, analysing and reporting patterns (themes) within data’ (Braun and Clarke, 2006:79). In a later version of their 2006 paper, Braun and Clarke (2019) describe a number of different approaches to thematic analysis, which they are keen to delineate, and distinguish ‘fully realised themes’ from ‘confusing summaries of data domains or topics’ (2019:589). </p>
-                  <p>A ‘fully realised’ approach to thematic analysis is designed to be inductive, or ‘bottom-up’. The first stage is usually to code the interview transcript for important words, phrases or ideas. Boyatzis (1998:63) defines these words, phrases or ideas as ‘the most basic segment, or element, of raw data or information that can be assessed in a meaningful way regarding the phenomenon’. These elements are then grouped into larger categories and the relationship between the elements within the categories, and the categories themselves, are explored. In the presentation of the findings of a thematic analysis, extracts from the data may be used to exemplify the categories of which they form a part. Thematic analysis is usually conducted in the following stages (see Robson, 2011): </p>
-                  <ul>
-                    <li>familiarisation with the data: at this stage, the researcher reads and/or listens to the data a number of times, making notes of initial ideas</li>
-                    <li>generation of initial codes: during this stage, extracts from the data are coded across the dataset, with similar extracts being assigned the same code </li>
-                    <li>identification of themes: this stage involves organising codes into potential themes</li>
-                    <li>construction of thematic networks: at this stage a thematic map of the data is developed</li>
-                    <li>integration and interpretation: during this stage the patterning of (or relationship between) the themes is explored, which are then summarised and interpreted with reference to the context of the data and/or other, similar, research findings.</li>
-                  </ul>
+                  <h3>Transcribing spoken data </h3>
+                  <p>Researchers often talk about making choices about interviewing styles but rarely about the types and levels of transcriptions used when they write out their data. Wetherell (2003:29) reminds us to pay attention to these choices, saying that 'transcription constructs what the data is'. Although the primary data for this study were audio recordings, transcription was essential in order to be able to report the data to our clients and to help us begin to think about research question two. As Heath and Luff say (1993, p. 309, cited in ten Have, 2007, p. 96),  </p>
 
-                  <p>In contrast to this ‘bottom-up’ approach, in the case study described in this book, the client had already identified three themes prior to our analysis. The themes that were of interest to the client were: reasons for immigration to York; participants’ values in life; and what the participants said about any barriers in their lives. Given that the themes were pre-determined by the client and the analysis was linked to the client’s needs, a deductive, or ‘top-down’ approach to the thematic analysis was conducted. This approach runs the risk of providing ‘confusing summaries of data domains or topics’ (Braun and Clarke, 2019:589), but it did provide findings in a format that met the needs of our client. Furthermore, when combined with the findings of research question two, we hope that our summaries on the topics identified by the project leaders are shown (including to the project leaders) to be what they ‘are’: different stories about stories.  </p>
+                  <blockquote>The process of transcription…provides the researcher with a way of noticing, even discovering, particular events, and helps focus analytic attention on their socio-interactional organisation. </blockquote>
 
-                  <h3>Conversation analysis </h3>
-                  <p>Research question two asked: How do the interviewers’ contributions shape the interaction with the interviewees? The approach we took to this question is conversation-analytic, drawing on the main principles of conversation analysis: turn-taking, turn design and sequential organisation of talk (Sacks et al., 1974).  As described in chapter one, the main methodological resource of conversation analysis lies in interpreting the understanding of a previous talk in the next turn (Sacks et al., 1974).   </p>
-                  <p>The rationale for applying a conversation analysis-informed approach was to enable us to take a very close look at the details of the interview data, in order to study the ways in which specific interactional features had an effect on the progress of the interviews. As described by ten Have (1990), conversation analysis provides a structured way of studying the details of interactional extracts from a dataset enabling researchers to identify various insights in the data. Research question two required us to look at how the interviews started, and how they moved along, as well as how they got to their end. Conversation analysis’s focus on sequences helped us to see how questions led to answers, which in turn led to further questions; allowing us to pay attention to the ‘journey’ of the stories the participants told. </p>
-                  <p>Based on ten Have’s (1990) model, the following six stages were followed in analysing the data for our study:  </p>
-                  <h4>Stage one </h4>
-                  <p>The first step consists of making audio or video recordings of conversations. In the case of our study, this stage was already completed by the project leaders prior to this study and the recorded interviews were shared with the researchers. </p>
-                  <h4>Stage two </h4>
-                  <p>The second step is to produce a transcript of the recordings. There were two different transcriptions made for our study. Firstly, a verbatim transcription of all interviews was produced and shared with the community project leaders. Secondly, selected episodes from verbatim transcriptions were transcribed using conversation analysis transcription conventions. The selection of the episodes for transcription is discussed below. </p>
-                  <h4>Stage three </h4>
-                  <p>Stage three involves building a collection of extracts for analysis. There are a number of considerations to be made at this stage. For instance, ten Have (1990) suggests that a good starting point for researchers might be to focus thier attention on conversation openings or closings, or to select sequential structures with an interesting conversational phenomenon, for example overlaps, laughter or long pauses. Gail Jefferson referred to such selections as ‘virtuoso moments'; these are 'episodes that strike the observer as being carried out in a particularly felicitous manner' (ten Have, 2007:38). </p>
-                  <p>In the case of our study, all the interviews were listened to in order to identify sections of the interviews in which 'values' and 'barriers' were mentioned. In these sections, turn-taking sequences were examined and interesting conversational phenomena were noted, leading to the selection of five extracts, which are presented for detailed analysis in chapter four. The data from the 'reasons for immigration' section was not used because, in the majority of cases, the recordings of the interviews started with participants introducing themselves and explaining their reasons for immigrating. Therefore, there was no interaction between interviewees and interviewers to analyse.  </p>
-                  <h4>Stage four </h4>
-                  <p>Stage four is concerned with the initial analysis of the selected extracts, with a particular focus on the construction of turns, pauses, overlaps, repair and any other ’disturbances’ in the fluent working of the turn-taking system. ten Have (1990:9) describes this stage as an interpretation of the data which is 'specifically directed at a typification of what the utterances that make up the sequence can be held to be 'doing' and how these 'doings' interconnect'.  </p>
-                  <h4>Stage five </h4>
-                  <p>At this stage, further analysis is developed, combining the initial analysis from stage four with the researcher’s relevant knowledge about the research participants, in order to develop a more detailed understanding of the selected extracts.  </p>
-                  <h4>Stage six </h4>
-                  <p>Stage six of our study involved extending the analysis made in step four and five by comparing our data with similar or dissimilar examples found in other conversation analysis studies. ten Have (1990) highlights the importance of this stage for conversation analysis researchers, as it allows for the building of a collection of similar extracts to support a systematic comparison.  </p>
+                  <p>The choices that we made about the types and levels of transcription of our data included: the level of detail of the transcription (for example, whether or not to note non-verbal communication), what style of orthography to use (‘I won’t’ versus ‘I will not’), and the use of punctuation (see Mann, 2016). In the end, we used two types of transcription: verbatim transcription, as requested by the client, and some of the transcription conventions associated with conversation analysis, as developed by Gail Jefferson (Jefferson, 2004). </p>
+
+                  <p>Our verbatim transcription is content-focused and uses a limited number of transcription symbols, mainly to capture pauses, overlaps and additional information such as laughter. The verbatim transcription was requested by the client and is used to assist the thematic analysis of the data for the first research question. Our approach to transcription also acted as a route towards noticing interactionally ‘interesting’ features/extracts, to be used in the conversation analysis (Silverman, 2017). </p>
+
+                  <p>We used transcription of the interviews as a key ‘noticing device’ (ten Have, 2007:97). The Jeffersonian system of symbols we (partially) adopted aims to tread a middle way between a phonetic transcription (accurate, but difficult to read without a great deal of familiarity with the international phonetic alphabet and very consuming of space on the page) and a content-focussed transcription (easy to read, but not at all an accurate representation of how the interactants are speaking) (ten Have, 2007). The result of this compromise is a style of transcription that, we hope, provides an idea of how the interactants are actually speaking whilst still being fairly readable. There is no rule book for this ‘middle way’, and different users of Jefferson's system use slightly different sets of symbols, or develop new symbols to represent the features of spoken interaction of interest to them; see Appendix A for a list of symbols used in the transcripts of the data collected for this study. </p>
+                  
 
               </div>
             </div>
           </div>
         </section>
+        <div class="book__more" @click="readMore($event)">
+          <div class="_wrap">
+            <span>Read more</span><span>Show less</span><span></span>
+          </div>
+        </div>
       </div>
 
 
@@ -166,11 +153,11 @@
         <div class="cols">
           <div class="col f-justify--center">
             <div class="content">
-              <p>The outcome of our thematic analysis was a series of summaries for each interview highlighting the main themes that occurred in their interviews as well as a list of themes that were common for all the interview.  </p>
-              <p>As part of the conversation analysis we presented five conversation extracts in our book, we’ve selected one of them for you to study. While you are reading the extract, think about these questions: </p>
-              <p>How easy is the transcript to read? What details of the spoken interaction have we included? What are some of the details that may have been excluded? What do you notice about the contribution of the interviewee? What do you notice about the contribution of the interviewer? </p>
-              <p>Here is a key to the symbols we have used in the transcription: </p>
-              <Dictionary/>
+              <p>The four-part framework we outlined about is just a convenient way of sorting our ideas into categories, so that we can easily describe what we think are the main relationships between some different reasons for interviewing. However, we don’t mean to imply that this framework is the only way of sorting ideas. We also want to acknowledge that we have probably over-emphasised the differences between these approaches, in order to make them easier to describe. We also want to think carefully about the benefits and drawbacks of different approaches, or combinations of approaches. Finally, we want to stress the importance of talking to our ‘clients’ about reasons for doing interviews; in order to align our expectations with theirs, or as a way of clarifying and accepting our differences. </p>
+
+              <p>While you are reading the extract from chapter five, the final chapter, of our book, think about your own position. Do you think that differences in ideas about the purpose of an interview are, potentially, a problem or a resource? Why? In what circumstances? </p>
+
+
             </div>
           </div>
         </div>
@@ -183,20 +170,22 @@
           <div class="cols">
             <div class="col">
               <div class="book">
-                  <h3>Conversation analysis: Extract 2 </h3>
-                  <p>Extract two was taken from the beginning of the interview. The question that appeared prior to the one in the extract below was about how moving to the UK changed the IE’s values and treasures. The extract below starts with a new question about what the IE really treasures about their country of origin. </p>
+                  <h3>Bringing neo-positivist/romantic, constructionist and transformative perspectives together </h3>
+                  <p>The ‘two different cultures’ of interviews as research instruments for finding out what participants think/know, and interviews as research topics/co-constructions (Van den Berg et al. 2003:5), are not necessarily as far apart as they may seem, or, indeed, as we may have presented them in chapter one of this book. At least in applied linguistics, both thematic analysis and conversation analysis may, depending on the aims of the research project, have a useful part to play, depending on the needs of our client and the importance of a pragmatic approach to meeting these needs. We would not want to use ‘pragmatism’ as a reason for not thinking very carefully about our choices, however. Indeed, we hope that in this book we were able to demonstrate the importance of paying attention to the theories of interviewing when conducting qualitative applied linguistics studies, as suggested by Talmy (2010: 143), </p>
 
-                  <Transcription/>
+                  <blockquote>there is considerable need for heightened reflexivity about the interview methods that applied linguistics researchers use in their studies, on the role of the interviewer in occasioning interview answers, on the subject 'behind' the interviewee, on the status ascribed to interview data, and on how those data are analyzed and represented, regardless of whether one opts to conceive of interviews as research instrument, or research interviews as participation in social practices. </blockquote>
 
-                  <p>In the extract above, the IR begins a turn with a question 'is there anything in particular that you really do treasure about [country] then?'. What can be noted in lines 1-2 is that the IR is inviting the IE to think of any answer by saying the word anything, however it is followed by an invitation to think of something specific by placing an emphasis on in particular and the two pauses, which add further emphasis. In line 3, there is a significant pause before a request for clarification from the IE follows in line 4 with a repair initiator any particular. In line 5, the IR replies with anything which is followed by a pause. The pause is a potential transition relevance place that provides an opportunity for the IE to proceed with a reply. However, it is a very short pause and as the IE is silent and the IR carries on with a list of candidates for anything by suggesting, 'you know it could be food, music, people'. In line 6, the IE begins a turn with an overlap 'yes, yes I love the music', selecting music from the list offered by the IR in the previous turn. In line 8 and 9 there is an acknowledgment token mm and a pause, which are interpreted by the IE as an invitation to continue their turn in line 10. It starts with a hesitation, but elicits more details as the IE continues talking in lines 10-15 with the help of backchanneling tokens such as ‘right’ and ‘yeah’ from the IR to indicate active listening. Back channelling (also known as response tokens, see Gardener, 2001; Peter and Wong, 2015) is a very useful technique for interviewers to use to encourage more detailed answers. The extract ends with the IR’s next question. </p>
-                  <p>In the extract above, we observe how the IR‘s contribution in line 5, which may have been an attempt to clarify a problem for the IE, influences the IE’s choice of topic. If we considered the exchange in lines 1-5 in the context of everyday interaction, it could be argued that providing a list of words is a useful strategy, likely to be successful in explaining what is meant by anything. Furthermore, in a reflective vignette featured in Steve Mann’s book (2016:25) one researcher comments on his own use of a 'complex, multi-layered question' as providing the interviewee with more interactional resources to respond to and more thinking time. Research on elaborate questions in focus groups also suggest that, participants may find it helpful to be provided with multiple alternative suggestions to respond to (Puchta and Potter, 1999). However, Puchta and Potter (1999) highlight that the use of elaborate questions in focus groups is a very organised strategy of eliciting desired answers. Arguably, in an interview situation, this particular strategy could be less useful, perhaps even undermining of the validity of a subsequent thematic analysis of the IEs’ responses. Therefore, this extract is another example of the potential constraining effect the IR’s contribution might have on the IE talk. It illustrates a different type of constraining from the one seen in the first extract, which is achieved by offering a list of candidate suggestions. In this extract, the trigger of the constraining contribution also differs; it is after the IE asks for a clarification in line 4 'any in particular' that the IR provides a list of possible answers. It could be argued that in line 4, the IE could have been pausing for thought. However, it was interpreted by the IR as indicating a need for clarification, and an explanation followed. </p>
-                  <p>In Line 13 we see the IE using direct reported speech 'oh mammy put English one on ((laughter))' to describe that their children ask them to change music in the car.  Coulmas (1986) outlines that direct reported speech recalls on the original utterance by claiming the exact words used by the initial speaker. Here the IE is using the words 'oh [parent]’ to indicate that it is their children’s talk that is being reported. The use of a turn initial oh, also referred to as 'change-of-state-token' by Herritage (1984), at the beginning of line 13 announces a shift from IE own speech to one said by their children. Holt (1996:228) argues that direct reported speech is often used to 'provide evidence that supports the speaker’s version of an event'. In case of this extract it is possible to argue that the IE is using the direct reported speech to support their statement in line 11 that their children don’t like them they play the music from their country of origin in the car. Holt (2017) also argues that speakers use direct reported speech to engage the listener in storytelling. </p>
-                  <p>What happens in line 13 can also be described as an example of 'conversationalization' in the interviewee’s utterance. Conversationalization is described by Lee (2003:58) as a local discursive practice where an interviewee incorporates someone else's voice into their response. Such utterances are usually initiated by respondents with discourse markers oh, sure, OK, and yeah. Often those discourse markers are used to indicate the speaker’s response to a previous turn by another speaker. However, Lee (2003) shows data extracts where the above discourse markers are responses to a hypothetical turn by a constructed interlocutor. This is also observed in line 12 of the above extract which starts with 'oh [parent] put English one on ((laughter))’, where oh marks a transition to the interviewee’s child’s voice. The oh-prefaced response enables the interviewee to elaborate their view and also to suggest that their opinion was formed taking opposing views into account, making their response sound more credible. Lee (2003) demonstrates how interviewees use what he calls conversationalization in order to compensate for the constraints imposed by the role of an interviewer. Interviewees are aware that an interviewer can’t resort to ordinary conversation, hence why they make use of conversationalization to covertly enable the interviewers to engage in the conversation, 'but with the benefit that this engagement is subject to their control' (Lee, 2003:60). </p>
+                  <p>Given that the work of applied linguists is based on solving real-world, language-related problems, it seems likely that we will come across a variety of perspectives on language and communication, as well as on ‘reality’, knowledge, and society. These perspectives will, inevitably, result in a range of different ideas about how to do research, what the research findings mean, and how they can/should be used. As the case study reported here shows, our client approached the aims and uses of the interviews from a ‘romantic’ perspective, whereas as applied linguistics, we were more closely aligned with constructionist ideas about interview data. Based on our experiences during this study, we tentatively suggest that applied linguists engage in an open dialogue with clients, with caution, but without abandoning their own theoretical beliefs. Our position may differ from the experience of other researchers. Mazeland and ten Have (1996), for example, describe how they had to, reluctantly, leave their ‘comfortable’ position of what they describe as 'ethnomethodological indifference', in order to engage in debate with interviewers who were not linguists. Perhaps this is a difference between applied linguists and researchers in other disciplines, including linguistics. Given that the applied linguist’s job is to focus on recognising real-world problems in which there are language-related issues and/or to respond to the identification of a problem by a potential client (Hall et al, 2017), we are used to the idea of collaboration and negotiation with different perspectives, and do not see these processes as obstructive of our research, but as an essential and interesting part of it. </p>
 
               </div>
             </div>
           </div>
         </section>
+        <div class="book__more" @click="readMore($event)">
+          <div class="_wrap">
+            <span>Read more</span><span>Show less</span><span></span>
+          </div>
+        </div>
       </div>
 
 
@@ -204,7 +193,9 @@
         <div class="cols">
           <div class="col f-justify--center">
             <div class="content">
-              <p>The result of our conversation analysis was a series of recommendations for interviewers to consider if planning to use interviews for a project or research. The text in the box below outlines our recommendations. As you read through the extract, ask yourself whether any of the recommendations feel relevant to your own experience of interviewing? </p>
+              <h3>What next? </h3>
+              <p>At the end of chapter five of <i>York’s Hidden Stories</i>, we tried to think about what we had learned as a result of participating in the project, what we might do differently and what we might do next.</p>
+              <p>While you are reading the extract in the text box below, compare your learning (as a result of using these materials) with ours (as a result of participating in the project). Are there similarities? Differences? </p>
             </div>
           </div>
         </div>
@@ -218,18 +209,35 @@
           <div class="cols">
             <div class="col">
               <div class="book">
-                  <h3>Recommendations </h3>
-                  <p>An outcome of the conversation analysis that was conducted to address research question two was a set of recommendations for community workers who want to use interviews as part of their projects. It is important to acknowledge that these are recommendations for possible noticings that are based on our analysis of the data, collected in one context, and are not, therefore, presented as prescriptions for the management of all interviews. Instead, they are representative of a type of sensitivity (to the interactional effects of questions, answers and responses to answers) that interviewers can aim to develop; sensitivity that is deployed both ‘online’, as the interview is taking place and ‘offline’ when the interviewer analyses/uses their data.</p>
-                  <p><i>Recommendation 1</i>: if an interviewer notices that they have made a specific contribution, such as offering a word that narrowed the range of choices that the interviewee was presented with, they can consider following it up with a more general contribution such as ‘is there something else you want to say?’ or ‘do you have some more comments about this topic?’. </p>
-                  <p><i>Recommendation 2</i>: if an interviewer notices that an interviewee problematises their question, an interviewer can consider replying with ‘yes’ or ‘anything’ followed by a pause. This way an interviewer can avoid adding more information to the original question and focus on confirming that the interviewee has satisfied themselves that they have an understanding of the question. </p>
-                  <p><i>Recommendation 3</i>: if an interviewer notices that their response to an interviewee’s answer was overtly judgmental or seemed to change the direction of the answer, they can try repeating the original question. This, of course, could result in the interviewee repeating their answer or changing it. However, this technique may provide an opportunity for the interviewee to add to their answer. An additional suggestion here could be for an interviewer to consider asking the interviewee to summarise their answer.  </p>
-                  <p><i>Recommendation 4</i>: if an interviewer notices that the interviewee has not responded within five seconds of the question, let the silence be. Longer pauses allow time for the interviewee to think of answers. This can potentially lead to more detailed and interesting answers. </p>
-                  <p><i>Recommendation 5</i>: if an interviewer feels an answer from the interviewee is insufficient, consider asking them if they want to add more by saying ‘is there something else you want to say about this topic?’ and accept that there is the possibility of no further response. </p>
-                  <p>Having made these recommendations, however, we cannot be sure that telling them to an interviewer will make any difference to the way in which they conduct an interview. Much more research is needed into the role of training/experience in increasing sensitivity to the interactional consequences of questioning, and on the degree to which this sensitivity is useful while questioning. Having said this, Richards (2011:99) appears optimistic, suggesting that applied conversation analysis (and ‘other’ approaches to interview analysis) can be used, ’for the purposes of data analysis or improving technique, or both’ and that in ‘developing sensitivity to aspects of one’s talk makes it more likely that shifts of this sort [in, for example, the type of minimal responses used] will be noticed’. As Richards says, there is no ‘case for more detailed prescriptions regarding interview behaviour, but rather the opposite: a reminder that progress depends on the development of craft skills through the sensitive interrogation of one’s own work’ (2011: 107). It is very important to acknowledge this, that the recommendations suggested here are not prescriptions for all interviews but suggestions for how they might be managed. As Richards says, it is through careful reflection on our own interviewing skills that researchers can try to develop their craft; a process of development that is self-generated, not instructed, and which is acutely aware of the benefits and limitations of our choices. </p>
+                  <h3>Our final reflections </h3>
+                  <p>In the final section of our book we ask ourselves a question ‘so what?’. It is a question that provides an end to our study; a chance to summarise what we have learned and reflect on the significance of this learning. It also helps us to think about what we might have done differently and what we could do next. </p>
+
+                  <p>We have learned that interviews look so familiar that they have almost become invisible as a cultural construct. Their framing and constraining effects, on relationships and identities/personal histories, are so familiar to us as to be un-remarkable. It is the job of applied linguists to point out that interviews are an opportunity for a story to be projected or constrained/rejected; a site of creative struggle, of innovation and destruction. We should demonstrate the delicate mechanisms through which this struggle takes place, including the effects of repetition, silence, overlap and the many other features we described in chapter four of this book. </p>
+
+                  <p>In accordance with Rapley (2019) we have attempted to show that when using interviews as research instruments, equal attention and analytic consideration needs to be applied to, </p>
+
+                  <blockquote>pre- and post- interview talk, to moments of sampling, recruitment and consent, to the preparation of and adjustments to interview guides, and most importantly, to recover the different times, spaces and places, of the 'desk work' for doing analysis on interviews' (Rapley 2019: 282). </blockquote>
+
+                  <p>We have learned that the clients of applied linguists, and the participants on our research, may have very different ideas about the aims of research and the meaning/use of data. These differences are interesting, and need to form part of the research process as we work out what we all mean by familiar concepts/acts such as ‘question’, ‘home’, ‘value’ and so on. Not taking the time to work out how we conceptualise these aspects of ‘common sense’ is a missed opportunity for collaboration and depletes the value of the research findings.  </p>
+
+                  <p>We have learned that it is possible to do research on interviews that treat the interaction both as content (a neo-positivist or romantic conceptualisation of the interview) and discourse (a constructionist or transformative approach). And that these approaches do conflict with each other conceptually, but, very importantly, that this conflict can provide a good way in to an ontologically-aware type of public engagement that is typical of applied linguistics. </p>
+
+                  <p>We have learned that people are not just ‘themselves’ (a neo-positivist/romantic assumption), and don’t only exist in relation to each other (a constructionist assumption), but that they also ‘intra-act' (Barad, 2007) with material things, including inorganic objects (such as a recording device, a car), technologies (such as a transcription code, music) and non-human organisms (such as pets and plants).  </p>
+
+                  <p>We have learned that what seemed like binary categories: one versus another, interviewer versus interviewee, content versus discourse, academic versus public are actually fluid, dynamic concepts that are continually emerging in interaction as a result of what people think ‘is’, what they think they know, and what they believe is fair (see Toohey, 2019). Instead of defending our territory (be that a place, a familiar generalisation, a research method, or an institution), we could open up ourselves, and our clients and research participants, to the infinite undoing of endings/conclusions and therefore the possibility of new histories. We could acknowledge the transformative power of ‘just’ observing. And we could point to our interconnectedness and therefore the importance of our obligations to each other. </p>
+
+                  <p>We have also discovered that York has ‘hidden’ diversity, in a variety of respects, and that improving awareness of difference is probably a way of becoming comfortable with difference, rather than feeling threatened by it, or threatened by other peoples’ fear of it. On the other hand, the opportunity to tell our ‘own’ story is often welcomed and the aspects of our story that we may like to stress are those that we think differ from other stories. There is always a tension between wanting to be ‘ourselves’ and wanting to be part of something else. Story-telling is one way of constantly negotiating that tension, against the constantly changing backdrop of the city, as it exists in ‘reality’ and in our minds. </p>
+
+                  <p>What we could have done differently and what we could do next are the same thing. We could have built in an evaluation phase in to the research. On the other hand, when we set off on this project, we didn’t anticipate that a series of recommendations for community project interviews would be an outcome of our research. It was probably an error of planning not to assume that something would come out of our study that would need testing with the help of our client. So, next, we would like to design a new study that looks at the effectiveness of awareness-raising activities for interviewers, and that also works with ‘hidden’ individuals and groups to collaborate on ways of them telling their stories. </p>
               </div>
             </div>
           </div>
         </section>
+        <div class="book__more" @click="readMore($event)">
+          <div class="_wrap">
+            <span>Read more</span><span>Show less</span><span></span>
+          </div>
+        </div>
       </div>
 
 
@@ -251,21 +259,36 @@
           <div class="cols">
             <div class="col">
               <div>
-                <p>Think about the recommendations that we made as a result of our analysis of the community project data and ask yourself the following questions:</p>
+                <p>Here, we ask you to reflect for a final time on the following two questions: </p>
                 <ul class="reflects">
                   <li>
-                      <div class="_expand">
+                      <div class="_expand" @click="expand($event)">
                         <div class="_title">
-                          <span>Do any of the recommendations feel relevant to your experience of interviewing in Part One? If so, which one(s)? </span>
+                          <span>What are some of the differences between your two interviews and what you have learned from the two sessions? </span>
                         </div>
-                        <div class="_button">+</div>
+                        <div class="_button"></div>
                       </div>
                       <div class="_form">
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                        <textarea name="" id="" cols="30" rows="10" v-model="answers.one.value" @input="checkEmpty($event)"></textarea>
+                      </div>
+                  </li>
+
+                  <li>
+                      <div class="_expand" @click="expand($event)">
+                        <div class="_title">
+                          <span>Having interviewed, what are your obligations to your interviewee and the communities they identify with? </span>
+                        </div>
+                        <div class="_button"></div>
+                      </div>
+                      <div class="_form">
+                        <textarea name="" id="" cols="30" rows="10" v-model="answers.two.value" @input="checkEmpty($event)"></textarea>
                       </div>
                   </li>
                 </ul>
-                <p>Write up your answers in a short paragraph (about 500 words) and upload to XXXXX on Moodle or post on a discussion board. </p>
+                
+                <div class="submit-form">
+                  <button class="btn" @click="sendEmail()">Email the answers</button>
+                </div>
               </div>
             </div>
           </div>
@@ -279,47 +302,8 @@
           <div class="col">
             <div>
               <h2 class="-center">What next</h2>
-              <ul class="tabs">
-
-                <li class="tab">
-                  <div class="_img">
-                    <div class="_count">2</div>
-                    <img src="@/assets/head.png" alt="">
-                  </div>
-                  <div class="_content">
-                    <div class="_title">Input and Reflect </div>
-                    <div class="_icon">
-                      <img src="@/assets/arrow-right.svg" alt="">
-                    </div>
-                  </div>
-                </li>
-
-                <li class="tab">
-                  <div class="_img">
-                    <div class="_count">3</div>
-                    <img src="@/assets/head.png" alt="">
-                  </div>
-                  <div class="_content">
-                    <div class="_title">Interview Two</div>
-                    <div class="_icon">
-                      <img src="@/assets/arrow-right.svg" alt="">
-                    </div>
-                  </div>
-                </li>
-                
-                <li class="tab">
-                  <div class="_img">
-                    <div class="_count">4</div>
-                    <img src="@/assets/head.png" alt="">
-                  </div>
-                  <div class="_content">
-                    <div class="_title">Reflect and Recommend</div>
-                    <div class="_icon">
-                      <img src="@/assets/arrow-right.svg" alt="">
-                    </div>
-                  </div>
-                </li>
-              </ul>
+              
+              <Tabs/>
 
             </div>
           </div>
@@ -330,23 +314,24 @@
 </template>
 
 <script>
-import Dictionary from '../Components/Dictionary.vue'
-import Transcription from '../Components/Transcription.vue'
-import { http } from '../utils/ajax'
+import Tabs from '../Components/Tabs.vue'
+import { general } from '../mixins/general'
 export default {
-  components: { Transcription, Dictionary },
-  name: 'Two',
+  components: { Tabs },
+  name: 'Four',
+  mixins: [general],
   data: () => ({
-    content: 'one'
-  }),
-  created() {
-    http.get(`homepage`)
-      .then(response => {
-        this.content = response.data
-      })
-      .catch(e => {
-        console.log(e)
-      })
-  }
+    subject: "Interview | Part 4",
+    answers: {
+      one: {
+        title: 'What are some of the differences between your two interviews and what you have learned from the two sessions? ',
+        value: ''
+      },
+      two: {
+        title: 'What contribution did you make to the interview? ',
+        value: ''
+      }
+    }
+  })
 }
 </script>

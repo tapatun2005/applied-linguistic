@@ -3,6 +3,10 @@
     display: flex;
     margin: 0 2rem;
     flex-wrap: wrap;
+
+    @media (max-width: $mobile) { 
+        margin: 0 1rem;
+    }
     .col {
         position: relative;
         margin: 0 1rem;
@@ -41,6 +45,10 @@
             @media (max-width: $mobile) {
                 flex: 2 1 100%;
             }
+        }
+
+        &.-m-bottom {
+            margin-bottom: 2rem;
         }
     }
 

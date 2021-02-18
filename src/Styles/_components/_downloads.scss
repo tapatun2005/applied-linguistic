@@ -28,6 +28,9 @@
         ._img {
             width: 100px;
             margin-bottom: 2rem;
+            @media (max-width: $mobile) {
+                width: 45px;
+            }
         }
 
         // ._content {

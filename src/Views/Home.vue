@@ -51,8 +51,18 @@
         <div class="cols">
           <div class="col">
             <div class="video">
-                <img src="@/assets/head.png" alt="">
-            </div>
+                <div class="video__wrapper" @click="showVideo($event)">
+                  <img src="@/assets/rachel.png" alt="">
+                  <i></i>
+                </div>
+                <div class="video__popup">
+                  <div class="video__popup__wrapper" @click="closeVideo($event)"></div>
+                  <div class="video__popup__frame">
+                    <iframe data-src="https://www.youtube.com/embed/3vyu2SNw9v4?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                  <div class="video__popup__close" @click="closeVideo($event)"></div>
+                </div>
+            </div> 
           </div>
         </div>
       </section>
@@ -64,59 +74,7 @@
               <h2 class="-center">Outline</h2>
               <p class="-center">These materials are made up of four parts</p>
 
-              <ul class="tabs">
-                <li class="tab">
-                  <div class="_img">
-                    <div class="_count">1</div>
-                    <img src="@/assets/head.png" alt="">
-                  </div>
-                  <div class="_content">
-                    <div class="_title">Interview One and Reflect</div>
-                    <div class="_icon">
-                      <img src="@/assets/arrow-right.svg" alt="">
-                    </div>
-                  </div>
-                </li>
-
-                <li class="tab">
-                  <div class="_img">
-                    <div class="_count">2</div>
-                    <img src="@/assets/head.png" alt="">
-                  </div>
-                  <div class="_content">
-                    <div class="_title">Input and Reflect </div>
-                    <div class="_icon">
-                      <img src="@/assets/arrow-right.svg" alt="">
-                    </div>
-                  </div>
-                </li>
-
-                <li class="tab">
-                  <div class="_img">
-                    <div class="_count">3</div>
-                    <img src="@/assets/head.png" alt="">
-                  </div>
-                  <div class="_content">
-                    <div class="_title">Interview Two</div>
-                    <div class="_icon">
-                      <img src="@/assets/arrow-right.svg" alt="">
-                    </div>
-                  </div>
-                </li>
-                
-                <li class="tab">
-                  <div class="_img">
-                    <div class="_count">4</div>
-                    <img src="@/assets/head.png" alt="">
-                  </div>
-                  <div class="_content">
-                    <div class="_title">Reflect and Recommend</div>
-                    <div class="_icon">
-                      <img src="@/assets/arrow-right.svg" alt="">
-                    </div>
-                  </div>
-                </li>
-              </ul>
+              <Tabs/>
 
             </div>
           </div>
@@ -127,20 +85,14 @@
 </template>
 
 <script>
-import { http } from '../utils/ajax'
+import Tabs from '../Components/Tabs'
+import { general } from '../mixins/general'
 export default {
   name: 'Home',
+  components: { Tabs },
+  mixins: [general],
   data: () => ({
     content: 'one'
-  }),
-  created() {
-    http.get(`homepage`)
-      .then(response => {
-        this.content = response.data
-      })
-      .catch(e => {
-        console.log(e)
-      })
-  }
+  })
 }
 </script>

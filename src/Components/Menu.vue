@@ -1,9 +1,10 @@
 <template>
     <nav :class="{ 'is-active': isOpen }">
         <router-link to='/'>Homepage</router-link>
-        <router-link to='/pages'>Pages</router-link>
-        <router-link to='/tasks'>Tasks</router-link>
-        <router-link to='/contacts'>Contacts</router-link>
+        <router-link to='/one'>Part One</router-link>
+        <router-link to='/two'>Part Two</router-link>
+        <router-link to='/three'>Part Three</router-link>
+        <router-link to='/four'>Part Four</router-link>
     </nav>
     <div 
         @click="toggle" 

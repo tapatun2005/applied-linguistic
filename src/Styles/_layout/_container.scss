@@ -40,3 +40,9 @@ section {
 .content {
     max-width: 650px;
 }
+
+.m-hidden {
+    @media (max-width: $tablet) {
+        display: none !important;
+    }
+}
