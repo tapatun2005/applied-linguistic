@@ -19,6 +19,7 @@ section {
     padding: 50px 0;
     overflow: hidden;
     &.-bg {
+        overflow: auto;
         &:before {
             content: '';
             position: absolute;
