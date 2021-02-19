@@ -17,6 +17,11 @@
         cursor: pointer;
         transition: transform .1s ease-in-out;
 
+        a {
+            color: $black;
+            text-decoration: none;
+        }
+
         &:hover {
             transform: scale(1.05);
         }
@@ -47,7 +52,7 @@
         ._content {
             padding: 20px 40px;
             display: flex;
-            flex: 1 1 0;
+            flex: 1 1 auto;
             flex-direction: column;
             justify-content: space-between;
 
@@ -59,6 +64,37 @@
             ._icon {
                 img {
                     width: 32px;
+                }
+            }
+        }
+    }
+
+    &.-menu {
+        max-width: 900px;
+        ._img {
+            @media (max-width: $mobile) {
+                padding-top: 23%;
+            }
+
+            @media (max-width: $mobile) {
+                display: none;
+            }
+            ._count {
+                @media (max-width: $mobile) {
+                    display: none;
+                }
+            }
+        }
+
+        ._content {
+            @media (max-width: $mobile) {
+                flex-direction: row;
+                padding: 20px 30px
+            }
+            ._title {
+                @media (max-width: $mobile) {
+                    margin-bottom: 0;
+                    margin-right: 20px;
                 }
             }
         }

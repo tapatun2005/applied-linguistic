@@ -5,7 +5,11 @@
     flex-wrap: wrap;
 
     @media (max-width: $mobile) { 
-        margin: 0 1rem;
+        margin: 0 3rem;
+    }
+
+    @media (max-width: 340px) {
+        margin: 0 2rem;
     }
     .col {
         position: relative;

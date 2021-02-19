@@ -22,7 +22,7 @@
             </div>
         </div>
     </div>
-    <footer>
+    <!-- <footer>
         <div class="container">
             <div class="cols">
                 <div class="col">
@@ -53,7 +53,7 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> -->
 </template>
 
 <script>
