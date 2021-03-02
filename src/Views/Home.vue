@@ -1,5 +1,5 @@
 <template>
-  <div v-if="content" class="container">
+  <div v-if="loaded" class="container">
       
       <div class="cols">
         <div class="col h--full f-justify--center f-direction--column">
@@ -13,7 +13,7 @@
         </div>
         <div class="col f-direction--column f-justify--center">
           <div class="img img--intro">
-            <img class="" src="@/assets/head.png">
+            <img class="" src="@/assets/head-home.png">
           </div>
         </div>
       </div>
@@ -35,13 +35,12 @@
 
           <div class="col-3 f-justify--center">
             <article>
-              <p>These materials ask you to consider how and why you might use interviews to collect data for your dissertation, and on the possible consequences of your choices for you, your interviewees and your research.</p>
-
-              <p>We begin with an outline of the contents of the materials, followed by some detailed guidelines for each of the four parts of the session. Finally, we offer the opportunity for you to feedback on these materials and make recommendations for how they can be further developed.</p>
-
-              <p>In working your way through these materials, we hope that you will reflect on why and how interviews can generate and/or answer research questions about how ‘real world’ problems that (are believed to) involve language may be solved. If you wish, you may contribute your interview transcripts and (anonymised) reflections to an ongoing research project that we (Dasha and Rachel) are conducting. More details about our project, and how to participate, are provided in the detailed guidelines to part one of these materials.</p>
-
-              <p>The text in boxes that you will see in subsequent parts of these materials is taken directly from the book on which the information here is based (Wicaksono and Zhurauskaya, 2020). Please accept our apologies if there are cross references in this text which don’t make sense when taken out of context, we hope that it won’t be too distracting! We have added page numbers to the text boxes, so that you can quote our work if you want to, without having to get hold of our actual book. </p>
+              <p>Welcome to our York’s Hidden Stories website!  </p>
+              <p>We have written these materials for students and community project workers who are interested in using interviews in their studies and/or work. Perhaps you are curious to know more about the experiences of an individual or group of people, maybe you want to amplify their voices, or to reflect on your own relationship with them.  </p>
+              <p>As you work your way through these materials, we will ask you to consider how and why you might use interviews to collect data for your dissertation, and on the possible consequences of your choices for you, your interviewees, and your research. </p>
+              <p>We begin with an outline of the contents of the materials you will find here, followed by some detailed guidelines for each of the four parts of the site. Finally, we offer the opportunity for you to feedback on these materials and make recommendations for how they can be further developed. </p>
+              <p>The text that is white on green, which you will see in subsequent parts of these materials, is taken directly from our book (Wicaksono and Zhurauskaya, 2020). Please accept our apologies if there are cross references in this text which don’t make sense when taken out of context, we hope that it won’t be too distracting! We have added page numbers, so that you can quote our work if you want to, without having to get hold of our actual book. </p>
+              <p><i>Rachel and Dasha </i></p>
             </article>
           </div>
         </div>
@@ -52,7 +51,7 @@
           <div class="col">
             <div class="video">
                 <div class="video__wrapper" @click="showVideo($event)">
-                  <img src="@/assets/rachel.png" alt="">
+                  <img src="@/assets/dasha-rachel.png" alt="">
                   <i></i>
                 </div>
                 <div class="video__popup">
@@ -92,7 +91,10 @@ export default {
   components: { Tabs },
   mixins: [general],
   data: () => ({
-    content: 'one'
-  })
+    loaded: false
+  }),
+  mounted() {
+    this.loaded = true
+  }
 }
 </script>

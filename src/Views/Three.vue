@@ -16,7 +16,7 @@
         </div>
         <div class="col f-direction--column f-justify--center m-hidden">
           <div class="img img--intro">
-            <img class="" src="@/assets/head.png">
+            <img class="" src="@/assets/head-three.png">
           </div>
         </div>
       </div>
@@ -74,8 +74,8 @@
             <article>
               <p>Things you can prepare in advance:</p>
               <ul class="tasks">
-                <li>Contact the person you interview to arrange a suitable time for a second interview.</li>
-                <li>For this second interview, you will ask your interviewee about their post-lockdown (return-to-work/-university/-public transport/-high street shopping) experiences. You should write down three or four questions on this topic in advance of the interview.</li>
+                <li>Contact the person you interview to arrange a suitable time for a second interview.   </li>
+                <li>Choose a topic for this second interview. For example, you could ask your interviewee about their post-lockdown (return-to-work/-university/-public transport/-high street shopping) experiences. You should write down three or four questions on your topic in advance of the interview.  </li>
               </ul>
             </article>
           </div>
@@ -132,7 +132,7 @@
                 <li>Re-affirm the purpose of the interview. </li>
                 <li>Reassure the interviewee about the confidentiality and remind them that it is not a test, so there are no right or wrong answers to questions! </li>
                 <li>Let the interviewee know that you are audio recording the conversation.</li>
-                <li>When you have finished the interview, save it onto the York St John OneDrive, so that you can access it on any device and be sure that the data is stored securely. You can then delete the interview file from all other devices.</li>
+                <li>When you have finished the interview, upload it to cloud-based storage, such as dropbox. You can then delete the interview file from all other devices.  </li>
                 <li>Overall, have fun!</li>
               </ul>
             </article>
@@ -268,7 +268,7 @@
                   </li>
 
                 </ul>
-
+                <p>You could write up your answers in a short paragraph as part of your ongoing reflection on your research methods. </p>
                 <div class="submit-form">
                   <button class="btn" @click="sendEmail()">Email the answers</button>
                 </div>

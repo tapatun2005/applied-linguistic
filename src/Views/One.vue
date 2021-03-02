@@ -8,7 +8,7 @@
               <span class="subtitle">Part 1</span>
               Interview one and Reflect
             </h1>
-            <p class="-lg">In part one we begin with some practical instructions for your first interview; including how to prepare, who to interview, and how to evidence that your interviewee understands and agrees to the role of research participant.</p>
+            <p class="-lg">In part one we begin with some practical instructions for your first interview; including how to prepare, who to interview, and how to evidence that your interviewee understands and agrees to the role of research participant. </p>
           </div>
           <div class="icon__scroll">
             <img src="@/assets/arrow-down.svg" alt="">
@@ -16,7 +16,7 @@
         </div>
         <div class="col f-direction--column f-justify--center m-hidden">
           <div class="img img--intro">
-            <img class="" src="@/assets/head.png">
+            <img class="" src="@/assets/head-one.png">
           </div>
         </div>
       </div>
@@ -43,7 +43,7 @@
 
           <div class="col-3 f-justify--center">
             <article>
-              <p>We suggest a topic for your interviews and an interview ‘style’. We also offer some options for recording the interview and beginning to convert the data you elicit from your interviewee into information for a research project. Finally, we ask you to write a short paragraph on what went well in your first interview and what you might do differently next time.</p>
+              <p>We suggest an interview ‘style’. We also offer some options for recording the interview and for beginning to convert the data you elicit from your interviewee into information for a research project. Finally, we suggest that you to write a short paragraph on what went well in your first interview and what you might do differently next time.</p>
             </article>
           </div>
         </div>
@@ -75,14 +75,14 @@
             <article>
               
               <ul class="tasks">
-                <li>The interview should last approximately 15-20 minutes. However, it is importable to give yourself and your participant extra time to get comfortable and make sure your recording equipment is set up.  </li>
-                <li>Arrange for you and your interviewee to be in a quiet and comfortable place for the time of the interview to minimise any interruptions.  </li>
-                <li>Turn off or mute your mobile phone and ask your interviewee to do the same. </li>
-                <li> If you are using your computer to interview and record, close all extra programs — particularly any Internet browser windows or streaming media. You don’t want any unnecessary and distracting notifications. </li>
-                <li>Consider doing a double recording of the audio on your phone, you can download free Voice Recorder apps on IOS or Android. </li>
-                <li> If you can, use a hard-wired Internet connection (rather than a wifi connection), as it limits any degradation of the signal. </li>
-                <li>If you aren't able to use a hard-wired connection, you can sit as close to the wifi router as possible.</li>
-                <li>When you have finished the interview, save it onto the York St John OneDrive, so that you can access it on any device and be sure that the data is stored securely. You can then delete the interview file from all other device</li>
+                <li>Identify a person to interview. You can interview anyone you know: a relative, friend or classmate.  </li>
+                <li>Decide on a topic for your interview. You should write down three or four questions on your topic in advance of the interview. During the interview, you can, if you want to, ask generic ‘follow up’ questions such as ‘can you give me an example of what you mean’, ‘why did you/do you think...?’ or ‘how does that/it compare with...?’. This type of interview, where you prepare some questions in advance and then explore the interviewees answers in more depth with follow-up questions, is called ‘semi-structured’.  </li>
+                <li>Before the interview takes place there is an important ‘consent to participate’ form to fill in. The consent form records the permission of your interviewee to be interviewed and recorded, and for their information to be used as data by you. Please do not conduct your interview before you have filled in the form and your interviewee has signed it. When you have done this, please keep the form in a safe place. </li>
+                <li>We suggest that your interview takes place online, via Zoom, Skype, Microsoft Teams or similar. Talk to your interviewee in advance to find out their preferred video calling platform.   </li>
+                <li>Familiarise yourself with how to record the interview; either just the audio, or audio and video.  </li>
+                <li>Here are some links to instructions about recording on different platforms: <a href="https://www.skype.com/en/blogs/2018-09-call-recording/#:~:text=To%20start%20call%20recording%20on%20mobile%2C%20tap%20the%20More%20options,Call%20recording%20notification%20on%20desktop." target="_blank">Skype recording instructions</a> , <a href="https://support.zoom.us/hc/en-us/articles/201362473-Local-recording#:~:text=Overview,audio%20locally%20to%20a%20computer." target="_blank">Zoom recording instructions</a> and   <a href="https://support.microsoft.com/en-us/office/record-a-meeting-in-teams-34dfbe7f-b07d-4a27-b4c6-de62f1348c24#bkmk_recordmeetingorcall" target="_blank">Teams recording instructions</a>.</li>
+                <li>Skype has an option to turn subtitles on while you are in a video call. You could practise turning subtitles on in Skype and saving them to access later. This will help you when you come to transcribe your interview. </li>
+                <li>Consider doing a test of the recording setup you have chosen. It is also worth checking your internet speed by running a speed test on Google. The recommended internet speed is 2MBPS. </li>
               </ul>
             </article>
           </div>
@@ -111,7 +111,7 @@
                 <li>Consider doing a double recording of the audio on your phone, you can download free Voice Recorder apps on IOS or Android. </li>
                 <li>If you can, use a hard-wired Internet connection (rather than a wifi connection), as it limits any degradation of the signal.</li>
                 <li> If you aren't able to use a hard-wired connection, you can sit as close to the wifi router as possible. </li>
-                <li>When you have finished the interview, save it onto the York St John OneDrive, so that you can access it on any device and be sure that the data is stored securely. You can then delete the interview file from all other devices.</li>
+                <li>When you have finished the interview, we recommend that save it into the cloud, using dropbox or similar, so that you can access it on any device and be sure that the data is stored securely. You can then delete the interview file from all other devices. </li>
               </ul>
             </article>
           </div>
@@ -139,7 +139,7 @@
                 <li> Re-affirm the purpose of the interview.  </li>
                 <li>Reassure the interviewee about the confidentiality and remind them that it is not a test so there are no right or wrong answers to questions! </li>
                 <li>Let the interviewee know that you are audio recording the conversation. </li>
-                <li>When you have finished the interview, save it onto the York St John OneDrive, so that you can access it on any device and be sure that the data is stored securely. You can then delete the interview file from all other devices.</li>
+                <li>When you have finished the interview, save it using cloud-based storage and then delete the interview file from all other devices.</li>
                 <li>Overall, have fun! </li>
               </ul>
             </article>
@@ -268,6 +268,8 @@
 
                 </ul>
 
+                <p>You could write up your answers to these questions as part of your ongoing reflection on your research methods. </p>
+
                 <div class="submit-form">
                   <button class="btn" @click="sendEmail()">Email the answers</button>
                 </div>
@@ -288,28 +290,17 @@
               <ul class="downloads">
 
                 <li class="download">
-                  <div class="_img">
-                    <img src="@/assets/icon-pdf.png" alt="">
-                  </div>
-                  <div class="_content">
-                    <div class="_title">RESEARCH CONSENT FORM A</div>
-                    <div class="_icon">
-                      <img src="@/assets/download.svg" alt="">
+                  <a href="/reserch-consent-form.docx">
+                    <div class="_img">
+                      <img src="@/assets/icon-pdf.png" alt="">
                     </div>
-                  </div>
-                </li>
-
-
-                <li class="download">
-                  <div class="_img">
-                    <img src="@/assets/icon-pdf.png" alt="">
-                  </div>
-                  <div class="_content">
-                    <div class="_title">RESEARCH CONSENT FORM B</div>
-                    <div class="_icon">
-                      <img src="@/assets/download.svg" alt="">
+                    <div class="_content">
+                      <div class="_title">RESEARCH CONSENT FORM A</div>
+                      <div class="_icon">
+                        <img src="@/assets/download.svg" alt="">
+                      </div>
                     </div>
-                  </div>
+                  </a>
                 </li>
 
               </ul>

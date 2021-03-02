@@ -4,7 +4,7 @@
                     <router-link @click="toggleDelay" to='/one'>
                         <div class="_img">
                         <div class="_count">1</div>
-                        <img src="@/assets/head.png" alt="">
+                        <img src="@/assets/head-one.png" alt="">
                         </div>
                         <div class="_content">
                         <div class="_title">Interview One and Reflect</div>
@@ -21,7 +21,7 @@
                      <router-link @click="toggleDelay" to='/two'>
                         <div class="_img">
                         <div class="_count">2</div>
-                        <img src="@/assets/head.png" alt="">
+                        <img src="@/assets/head-two.png" alt="">
                         </div>
                         <div class="_content">
                         <div class="_title">Input and Reflect </div>
@@ -37,7 +37,7 @@
                     <router-link @click="toggleDelay" to='/three'>
                         <div class="_img">
                             <div class="_count">3</div>
-                            <img src="@/assets/head.png" alt="">
+                            <img src="@/assets/head-three.png" alt="">
                         </div>
                         <div class="_content">
                         <div class="_title">Interview Two</div>
@@ -52,7 +52,7 @@
                     <router-link @click="toggleDelay" to='/four'>
                         <div class="_img">
                         <div class="_count">4</div>
-                        <img src="@/assets/head.png" alt="">
+                        <img src="@/assets/head-four.png" alt="">
                         </div>
                         <div class="_content">
                         <div class="_title">Reflect and Recommend</div>
