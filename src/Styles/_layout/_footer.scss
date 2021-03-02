@@ -1,14 +1,17 @@
 footer {
     background-color: $black;
     padding: 20px 40px 10px;
+    position: relative;
 }
 
 .footer  {
+    position: relative;
     padding: 100px 40px 20px;
     background-color: darken($black, 1);
 
     @media (max-width: $tablet ) {
         padding: 100px 0 20px;
+        position: relative;
     } 
 }
 
