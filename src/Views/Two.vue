@@ -27,7 +27,7 @@
           <div class="col-1 -m-bottom">
             <div class="video">
                 <div class="video__wrapper" @click="showVideo($event)">
-                  <img src="@/assets/rachel.png" alt="">
+                  <img src="@/assets/dasha.png" alt="">
                   <i></i>
                 </div>
                 <div class="video__popup">
