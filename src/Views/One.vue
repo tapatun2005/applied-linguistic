@@ -290,7 +290,7 @@
               <ul class="downloads">
 
                 <li class="download">
-                  <a href="/reserch-consent-form.docx">
+                  <a href="/reserch-consent-form.docx" download>
                     <div class="_img">
                       <img src="@/assets/icon-pdf.png" alt="">
                     </div>

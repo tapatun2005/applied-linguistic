@@ -55,6 +55,7 @@ methods: {
         }
     },
     sendEmail(){
+        const mailTo = this.mailTo || 'you@example.com'
         const subject = this.subject
         const mailtoBody = `
 ${Object.keys(this.answers).map((key, index) => `
@@ -65,7 +66,7 @@ ${this.answers[key].value}%0A
 }
 `
 
-        window.location.href = `mailto:you@example.com?subject=${subject}&body=${mailtoBody}`
+        window.location.href = `mailto:${mailTo}?subject=${subject}&body=${mailtoBody}`
     }
 }
 }

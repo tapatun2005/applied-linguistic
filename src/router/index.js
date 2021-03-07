@@ -5,6 +5,7 @@ import One from '../Views/One.vue'
 import Two from '../Views/Two.vue'
 import Three from '../Views/Three.vue'
 import Four from '../Views/Four.vue'
+import Contacts from '../Views/Contacts.vue'
 
 const routerHistory = createWebHistory()
 
@@ -30,6 +31,10 @@ const router = createRouter({
       {
         path: '/four',
         component: Four
+      },
+      {
+        path: '/contact-us',
+        component: Contacts
       }
     ]
 })

@@ -72,6 +72,8 @@
                 </li>
            
         </ul>
+
+        <router-link @click="toggleDelay" to='/contact-us'>Contact us</router-link>
     </nav>
     <div 
         @click="toggle" 
